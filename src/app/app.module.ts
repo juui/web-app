@@ -1,7 +1,18 @@
+import 'hammerjs'
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+// Material 2
+import { MdCoreModule } from '@angular2-material/core'
+import { MdButtonModule } from '@angular2-material/button';
+import { MdCardModule } from '@angular2-material/card';
+import { MdRadioModule } from '@angular2-material/radio';
+import { MdCheckboxModule } from '@angular2-material/checkbox'
+import { MdTooltipModule } from '@angular2-material/tooltip';
+import { MdSliderModule } from '@angular2-material/slider';
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +23,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+
+    MdCoreModule, MdCardModule, MdButtonModule, MdRadioModule,
+    MdCheckboxModule, MdTooltipModule, MdSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
