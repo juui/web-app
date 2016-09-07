@@ -2,9 +2,9 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.ts$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'tslint'
+        loader: 'eslint'
       }
     ],
 
@@ -16,11 +16,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.ts$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
           'ng-annotate',
-          'ts'
+          'babel'
         ]
       },
       {
@@ -28,25 +28,15 @@ module.exports = {
         loaders: [
           'html'
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|.*\.spec\.js)/,
+        loader: 'isparta'
       }
     ]
   },
   plugins: [],
   debug: true,
-  devtool: 'cheap-module-eval-source-map',
-  resolve: {
-    extensions: [
-      '',
-      '.webpack.js',
-      '.web.js',
-      '.js',
-      '.ts'
-    ]
-  },
-  ts: {
-    configFileName: 'tsconfig.json'
-  },
-  tslint: {
-    configuration: require('../tslint.json')
-  }
+  devtool: 'cheap-module-eval-source-map'
 };

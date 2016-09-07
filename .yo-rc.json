@@ -1,20 +1,21 @@
 {
   "generator-fountain-angular1": {
-    "version": "0.7.2",
+    "version": "0.7.1",
     "props": {
       "framework": "angular1",
       "modules": "webpack",
-      "js": "typescript",
+      "js": "babel",
       "ci": [],
       "css": "styl",
-      "resolved": "/usr/local/lib/node_modules/generator-fountain-webapp/node_modules/generator-fountain-angular1/generators/app/index.js",
+      "skipInstall": true,
+      "resolved": "/home/travis/build/FountainJS/fountain/generator-fountain-angular1/generators/app/index.js",
       "namespace": "fountain-angular1",
       "argv": {
         "remain": [],
         "cooked": [],
         "original": []
       },
-      "sample": "todoMVC",
+      "sample": "hello",
       "router": "uirouter"
     }
   }

@@ -9,6 +9,14 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint'
+      }
+    ],
+
     loaders: [
       {
         test: /.json$/,
@@ -24,11 +32,11 @@ module.exports = {
         })
       },
       {
-        test: /\.ts$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
           'ng-annotate',
-          'ts'
+          'babel'
         ]
       },
       {
@@ -56,23 +64,8 @@ module.exports = {
     path: path.join(process.cwd(), conf.paths.dist),
     filename: '[name]-[hash].js'
   },
-  resolve: {
-    extensions: [
-      '',
-      '.webpack.js',
-      '.web.js',
-      '.js',
-      '.ts'
-    ]
-  },
   entry: {
     app: `./${conf.path.src('index')}`,
-    vendor: Object.keys(pkg.dependencies).filter(dep => ['todomvc-app-css'].indexOf(dep) === -1)
-  },
-  ts: {
-    configFileName: 'tsconfig.json'
-  },
-  tslint: {
-    configuration: require('../tslint.json')
+    vendor: Object.keys(pkg.dependencies)
   }
 };
