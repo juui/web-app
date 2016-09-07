@@ -6,7 +6,6 @@ import 'angular-animate';
 import 'angular-messages';
 import 'angular-material';
 
-import {hello} from './app/hello';
 import 'angular-ui-router';
 import routesConfig from './routes';
 
@@ -21,5 +20,4 @@ angular
       'ngMaterial'
     ]
   )
-  .config(routesConfig)
-  .component('app', hello);
+  .config(routesConfig);

@@ -1,0 +1,16 @@
+head
+
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome=1")
+
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  include head/alternates
+  include head/global-matadata
+  include head/facebook-metadata
+  include head/favicon
+
+  script(src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML')
+  script(type='text/x-mathjax-config').
+    MathJax.Hub.Config({ skipStartupTypeset: true, elements: ['math'], tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+
