@@ -8,10 +8,10 @@ import 'angular-material';
 
 import 'angular-ui-router';
 import routesConfig from './routes';
-
 import './index.styl';
-
 export const app = 'app';
+
+import {dashboard} from './app/dashboard'
 
 angular
   .module(app,
@@ -20,4 +20,5 @@ angular
       'ngMaterial'
     ]
   )
-  .config(routesConfig);
+  .config(routesConfig)
+  .component('app', dashboard);
