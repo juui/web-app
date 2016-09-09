@@ -1,9 +1,10 @@
 class ToolbarController {
 
   /** @ngInject */
-  constructor($mdSidenav, $log) {
+  constructor($mdSidenav) {
+
     this._$mdSidenav = $mdSidenav;
-    this._$log= $log;
+
   }
 
   toggleSidenav(menuId) {
@@ -12,8 +13,7 @@ class ToolbarController {
 
     this._$mdSidenav(menuId)
       .toggle()
-      .then(function () {
-        this._$log.debug("toggle " + menuId + " is done");
+      .then(() => {
       });
 
   }
@@ -22,5 +22,7 @@ class ToolbarController {
 
 export const toolbar = {
   template: require('./toolbar.template.html'),
-  controller: ToolbarController
+  controller: ToolbarController,
+  controllerAs: 'toolbarController',
+  selector: 'juuiToolbar'
 };

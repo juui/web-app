@@ -1,4 +1,4 @@
 md-toolbar.md-whiteframe-glow-z1()
   .md-toolbar-tools(tabindex='-1')
-    md-button.md-icon-button(ng-click='$ctrl.toggleSidenav()', ng-disabled='', aria-label='Open Menu', hide-gt-sm='')
+    md-button.md-icon-button.md-no-focus(ng-click="toolbarController.toggleSidenav('left')", ng-disabled='', aria-label='Open Menu', hide-gt-sm='')
       ng-md-icon(icon='menu', size='24', options='{"duration": 1500}')

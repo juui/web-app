@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-import 'angular-material/angular-material.css'
+import 'angular-material/angular-material.css';
 import 'angular-aria';
 import 'angular-animate';
 import 'angular-messages';
