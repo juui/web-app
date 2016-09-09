@@ -59,36 +59,11 @@
     <meta name="msapplication-square150x150logo" content="https://www.juui.org/favicon/mstile-150x150.png"/>
     <meta name="msapplication-wide310x150logo" content="https://www.juui.org/favicon/mstile-310x150.png"/>
     <meta name="msapplication-square310x310logo" content="https://www.juui.org/favicon/mstile-310x310.png"/>
+    <!--link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')-->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({ skipStartupTypeset: true, elements: ['math'], tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });</script>
   </head>
-  <body layout="row">
-    <md-sidenav class="md-whiteframe-z2" md-component-id="left" hide-print="" md-is-locked-open="$mdMedia('gt-sm')" tabindex="-1">
-      <md-content flex="" role="navigation"></md-content>
-    </md-sidenav>
-    <div layout="column" tabindex="-1" role="main" flex="">
-      <md-toolbar class="md-whiteframe-glow-z1">
-        <div class="md-toolbar-tools" tabindex="-1"></div>
-      </md-toolbar>
-      <md-content md-scroll-y="" layout="column" flex="">
-        <div class="docs-ng-view" ng-view="" layout-padding="" flex="noshrink">
-          <div class="doc-content">
-            <md-content>
-              <h2 class="md-headline" style="margin-top: 0">What is Angular Material?</h2>
-              <h2 class="md-headline">Training Videos:</h2>
-              <p>Here are some video courses that will help jump start your development with Angular Material.</p>
-            </md-content>
-          </div>
-        </div>
-        <div class="layout-align-center-center layout-row flex-noshrink" layout="row" flex="noshrink" layout-align="center center">
-          <div id="license-footer" flex="">
-            Powered by Google ©2014–2016.
-            Code licensed under the<a class="md-accent" ng-href="./license" href="./license">MIT License</a>
-            .
-                      Documentation licensed under<a class="md-default-theme md-accent" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
-          </div>
-        </div>
-      </md-content>
-    </div>
+  <body layout="column">
+    <juui-dashboard></juui-dashboard>
   </body>
 </html>

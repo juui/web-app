@@ -1,25 +1,4 @@
 html(ng-app='app')
   include layout/head
-  body(layout='row')
-    md-sidenav.md-whiteframe-z2(md-component-id='left', hide-print='', md-is-locked-open="$mdMedia('gt-sm')", tabindex='-1')
-      md-content(flex='', role='navigation')
-    div(layout='column', tabindex='-1', role='main', flex='')
-      md-toolbar.md-whiteframe-glow-z1()
-        .md-toolbar-tools(tabindex='-1')
-      md-content(md-scroll-y='', layout='column', flex='')
-        .docs-ng-view(ng-view='', layout-padding='', flex='noshrink')
-          .doc-content()
-            md-content()
-              h2.md-headline(style='margin-top: 0;') What is Angular Material?
-              h2.md-headline Training Videos:
-              p
-                | Here are some video courses that will help jump start your development with Angular Material.
-        .layout-align-center-center.layout-row.flex-noshrink(layout='row', flex='noshrink', layout-align='center center')
-          #license-footer(flex='')
-            | Powered by Google ©2014–2016.
-            | Code licensed under the
-            a.md-accent(ng-href='./license', href='./license') MIT License
-            | .
-            |           Documentation licensed under
-            a.md-default-theme.md-accent(href='http://creativecommons.org/licenses/by/4.0/', target='_blank') CC BY 4.0
-            | .
+  body(layout='column')
+    juui-dashboard()
