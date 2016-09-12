@@ -1,0 +1,21 @@
+md-card
+  md-card-header
+    md-card-avatar
+      img.md-user-avatar(src="./../images/svg/icons/juui-logo-purple-avatar.svg")
+    md-card-header-text
+      span.md-title juui
+      span.md-subhead Aprende Jugando
+
+  img.md-card-image(src="./../images/svg/icons/brain-opt.svg", alt="Juui")
+  md-card-title
+    md-card-title-text
+      span.md-headline Disfruta
+  md-card-content
+    p
+      | El mejor sitio para desarrollar tu conocimiento matemático.
+      | Aprenderás mediante simulaciones 3D, juegos en equipo, teoría y prácticas.
+  md-card-actions(layout="row", layout-align="end center")
+    // https://developers.facebook.com/docs/plugins/like-button#example
+    .fb-like(data-href="https://www.juui.org", data-layout="button", data-action="like", data-show-faces="false", data-share="false")
+    md-button.md-icon-button.md-accent(aria-label="Me gusta")
+      md-icon(md-svg-icon="action:ic_favorite_24px")

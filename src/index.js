@@ -9,6 +9,7 @@ import 'angular-material-icons';
 
 import 'angular-ui-router';
 import routesConfig from './routes';
+import runBlock from './runBlock';
 import './index.styl';
 export const app = 'app';
 
@@ -31,6 +32,7 @@ angular
     ]
   )
   .config(routesConfig)
+  .run(runBlock)
   .component('juuiDashboard', dashboard)
   .component('juuiToolbar', toolbar)
   .component('juuiSidenav', sidenav)

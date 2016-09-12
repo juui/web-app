@@ -1,2 +1,11 @@
-h1
-  | HOME
+div(layout-align="center center", layout-gt-md="row", layout="column", ng-cloak="")
+  #juui-main-menu.bg-green(layout="row", layout-wrap="", layout-align="center center", layout-xs="column",
+  layout-margin="",
+  flex-order="1", flex-order-gt-md="0")
+    include main-icon-menu-template
+
+
+  div.bg-blue(flex-order="0", flex-order-gt-md="1")
+    .md-padding(layout="row", layout-wrap="", layout-align="center center")
+      div(flex="50", flex-sm="100", flex-xs="100")
+        include main-banner-template
