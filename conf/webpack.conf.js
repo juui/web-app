@@ -6,8 +6,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
+  // url: {
+  //   dataUrlLimit: 1024 //1kb
+  // },
   module: {
     loaders: [
+      {
+        test: /\.svg/,
+        loaders:
+          [
+            'svg-url-loader'
+          ]
+      },
       {
         test: /.json$/,
         loaders: [

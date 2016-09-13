@@ -20,6 +20,13 @@ module.exports = {
 
     loaders: [
       {
+        test: /\.svg/,
+        loaders:
+          [
+            'svg-url-loader'
+          ]
+      },
+      {
         test: /.json$/,
         loaders: [
           'json'
