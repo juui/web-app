@@ -13,8 +13,10 @@ import 'angulartics-google-analytics';
 import 'angular-ui-router';
 import routesConfig from './routes';
 import runBlock from './runBlock';
-import './index.styl';
 export const app = 'app';
+
+import './index.styl';
+import './app/features/home/home.styles.styl'
 
 import {dashboard} from './app/features/dashboard/dashboard.component';
 import {toolbar} from './app/features/dashboard/toolbar.component';
