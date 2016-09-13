@@ -7,6 +7,9 @@ import 'angular-messages';
 import 'angular-material';
 import 'angular-material-icons';
 
+import 'angulartics';
+import 'angulartics-google-analytics';
+
 import 'angular-ui-router';
 import routesConfig from './routes';
 import runBlock from './runBlock';
@@ -27,7 +30,10 @@ angular
       'ui.router',
       'ngMaterial',
 
-      'ngMdIcons'
+      'ngMdIcons',
+
+      'angulartics',
+      'angulartics.google.analytics'
 
     ]
   )

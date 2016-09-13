@@ -44,27 +44,28 @@
   <div class="bg-blue" flex-order="0" flex-order-gt-md="1">
     <div class="md-padding" layout="row" layout-wrap="" layout-align="center center">
       <div flex="50" flex-sm="100" flex-xs="100">
-        <!--md-card-->
-        <!--  md-card-header-->
-        <!--    md-card-avatar-->
-        <!--      img.md-user-avatar(src="./../images/svg/icons/juui-logo-purple-avatar.svg")-->
-        <!--    md-card-header-text-->
-        <!--      span.md-title juui-->
-        <!--      span.md-subhead Aprende Jugando-->
-        <!---->
-        <!--  img.md-card-image(src="./../images/svg/icons/brain-opt.svg", alt="Juui")-->
-        <!--  md-card-title-->
-        <!--    md-card-title-text-->
-        <!--      span.md-headline Disfruta-->
-        <!--  md-card-content-->
-        <!--    p-->
-        <!--      | El mejor sitio para desarrollar tu conocimiento matemático.-->
-        <!--      | Aprenderás mediante simulaciones 3D, juegos en equipo, teoría y prácticas.-->
-        <!--  md-card-actions(layout="row", layout-align="end center")-->
-        <!--    // https://developers.facebook.com/docs/plugins/like-button#example-->
-        <!--    .fb-like(data-href="https://www.juui.org", data-layout="button", data-action="like", data-show-faces="false", data-share="false")-->
-        <!--    md-button.md-icon-button.md-accent(aria-label="Me gusta")-->
-        <!--      md-icon(md-svg-icon="action:ic_favorite_24px")-->
+        <md-card>
+          <md-card-header>
+            <md-card-avatar><img class="md-user-avatar" src="/asserts/images/svg/juui-logo-purple-avatar.svg"/></md-card-avatar>
+            <md-card-header-text><span class="md-title">juui</span><span class="md-subhead">Aprende Jugando</span></md-card-header-text>
+          </md-card-header><img class="md-card-image" src="/asserts/images/svg/brain-opt.svg" alt="Juui"/>
+          <md-card-title>
+            <md-card-title-text><span class="md-headline">Disfruta</span></md-card-title-text>
+          </md-card-title>
+          <md-card-content>
+            <p>
+              El mejor sitio para desarrollar tu conocimiento matemático.
+              Aprenderás mediante simulaciones 3D, juegos en equipo, teoría y prácticas.
+            </p>
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end center">
+            <!-- https://developers.facebook.com/docs/plugins/like-button#example-->
+            <div class="fb-like" data-href="https://www.juui.org" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+            <md-button class="md-icon-button md-accent" aria-label="Me gusta">
+              <md-icon md-svg-icon="action:ic_favorite_24px"></md-icon>
+            </md-button>
+          </md-card-actions>
+        </md-card>
       </div>
     </div>
   </div>

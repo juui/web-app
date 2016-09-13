@@ -6,17 +6,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  // url: {
-  //   dataUrlLimit: 1024 //1kb
-  // },
   module: {
     loaders: [
       {
-        test: /\.svg/,
-        loaders:
-          [
-            'svg-url-loader'
-          ]
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack'
+        ]
       },
       {
         test: /.json$/,
@@ -48,6 +45,22 @@ module.exports = {
         ]
       }
     ]
+  },
+  imageWebpackLoader: {
+    pngquant:{
+      quality: "65-90",
+      speed: 4
+    },
+    svgo:{
+      plugins: [
+        {
+          removeViewBox: false
+        },
+        {
+          removeEmptyAttrs: false
+        }
+      ]
+    }
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
