@@ -4,8 +4,8 @@ html(ng-app='app')
     include layout/facebook-script
     include layout/google-analytics
     include layout/juui-logo
-    .main-container()
+    div()
       .main-logo(ng-show="false")
         svg(preserveaspectratio="xMinYMin meet", width="100%", height="100%")
           use(xlink:href="#juuiLogo")
-    juui-dashboard()
+      juui-dashboard()
