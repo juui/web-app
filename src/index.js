@@ -13,6 +13,7 @@ import 'angulartics-google-analytics';
 import 'angular-ui-router';
 import routesConfig from './routes';
 import runBlock from './runBlock';
+import settings from './settings'
 export const app = 'app';
 
 import './index.styl';
@@ -40,6 +41,7 @@ angular
     ]
   )
   .config(routesConfig)
+  .config(settings)
   .run(runBlock)
   .component('juuiDashboard', dashboard)
   .component('juuiToolbar', toolbar)

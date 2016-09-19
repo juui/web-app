@@ -1,0 +1,10 @@
+## Add md-icon with colors theme
+
+    this.colors = {
+      favorite: $mdColors.getThemeColor('warn')
+    };
+
+ng-md-icon(icon='favorite', size='24', style="fill:{{::homeController.colors.favorite}}")
+
+md-button.md-icon-button.md-accent(aria-label="Me gusta")
+  md-icon(md-svg-icon="action:ic_favorite_24px")

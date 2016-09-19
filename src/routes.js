@@ -10,4 +10,5 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       component: 'juuiHome'
     });
+
 }
