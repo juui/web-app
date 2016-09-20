@@ -14,6 +14,8 @@ import 'angular-ui-router';
 import routesConfig from './routes';
 import runBlock from './runBlock';
 import settings from './settings'
+import {juuiAPI} from './app/core/api'
+
 export const app = 'app';
 
 import './index.styl';
@@ -26,6 +28,9 @@ import {content} from './app/features/dashboard/content.component';
 import {footer} from './app/features/dashboard/footer.component';
 
 import {home} from './app/features/home/home.component';
+
+import {topics} from './app/features/topics/topics.component';
+import {topicsFunctions} from './app/features/topics/functions/activities/definition/definition.component';
 
 angular
   .module(app,
@@ -43,9 +48,14 @@ angular
   .config(routesConfig)
   .config(settings)
   .run(runBlock)
+  .constant('juuiAPI', juuiAPI)
   .component('juuiDashboard', dashboard)
   .component('juuiToolbar', toolbar)
   .component('juuiSidenav', sidenav)
   .component('juuiContent', content)
   .component('juuiFooter', footer)
-  .component('juuiHome', home);
+  .component('juuiHome', home)
+  .component('juuiTopics', topics)
+  .component('juuiTopicsFunctions', topicsFunctions);
+
+
