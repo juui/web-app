@@ -6,11 +6,12 @@ class HomeController {
     this._$mdColors = $mdColors;
     this._$mdColorPalette = $mdColorPalette;
 
-    console.log($mdColors);
-    console.log();
-    this.colors = {
-      favorite: $mdColors.getThemeColor('warn')
-    };
+    //TODO: remove
+    // console.log($mdColors);
+    // console.log();
+    // this.colors = {
+    //   favorite: $mdColors.getThemeColor('warn')
+    // };
 
     this.timer = setInterval(() => {
       this.loadFacebookElements()

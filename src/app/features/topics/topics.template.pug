@@ -1,7 +1,8 @@
 h1
-  | Topics
+  | {{::topicsController.title}}
 ul
-  li
-    a(ui-sref-active="active", ui-sref="topics.functions({step:'Introduction'})")
-      | Introduction
+  li(ng-repeat="subTopic in ::topicsController.subTopics")
+    a(ui-sref-active="active", ui-sref="topics.functions({topic:topicsController.topic, subTopic:subTopic.key})")
+      //| {{subTopic.label}}
+      | {{topicsController.topic}} - {{subTopic.key}}
 ui-view()

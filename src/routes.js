@@ -1,35 +1,25 @@
 export default routesConfig;
 
+import
+{
+  juuiHomeState,
+  juuiTopicsState,
+  juuiTopicsFunctionsState
+}
+  from './app/states/index';
+
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
   const states = [
-    {
-      name: 'home',
-      url: '/',
-      component: 'juuiHome'
-    },
-    {
-      name: 'topics',
-      url: '/topics',
-      component: 'juuiTopics'
-    },
-    {
-      name: 'topics.functions',
-      url: '/{step}',
-      component: 'juuiTopicsFunctions',
-      resolve: {
-        step: /** @ngInject */
-          ($stateParams)=> {
-          return $stateParams.step;
-        }
-      }
-    }
+    juuiHomeState,
+    juuiTopicsState,
+    juuiTopicsFunctionsState
   ];
 
-  states.forEach(function(state) {
+  states.forEach(function (state) {
     $stateProvider.state(state);
   });
 

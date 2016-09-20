@@ -16,7 +16,7 @@ class FunctionsController {
 
 export const topicsFunctions = {
   bindings: {
-    step: '<'
+    _data: '<data'
   },
   template: require('./definition.template.html'),
   controller: FunctionsController,

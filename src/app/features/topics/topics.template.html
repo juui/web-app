@@ -1,6 +1,7 @@
 
-<h1>Topics</h1>
+<h1>{{::topicsController.title}}</h1>
 <ul>
-  <li><a ui-sref-active="active" ui-sref="topics.functions({step:'Introduction'})">Introduction</a></li>
+  <li ng-repeat="subTopic in ::topicsController.subTopics"><a ui-sref-active="active" ui-sref="topics.functions({topic:topicsController.topic, subTopic:subTopic.key})">
+      <!--| {{subTopic.label}}-->{{topicsController.topic}} - {{subTopic.key}}</a></li>
 </ul>
 <ui-view></ui-view>

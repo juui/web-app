@@ -14,7 +14,7 @@ import 'angular-ui-router';
 import routesConfig from './routes';
 import runBlock from './runBlock';
 import settings from './settings'
-import {juuiAPI} from './app/core/api'
+import juuiAPI from './app/core/api'
 
 export const app = 'app';
 
@@ -48,7 +48,7 @@ angular
   .config(routesConfig)
   .config(settings)
   .run(runBlock)
-  .constant('juuiAPI', juuiAPI)
+  .service('juuiAPI', juuiAPI)
   .component('juuiDashboard', dashboard)
   .component('juuiToolbar', toolbar)
   .component('juuiSidenav', sidenav)

@@ -10,3 +10,7 @@ ng-md-icon(icon='favorite', size='24', style="fill:{{::homeController.colors.fav
 
 md-button.md-icon-button.md-accent(aria-label="Me gusta")
   md-icon(md-svg-icon="action:ic_favorite_24px")
+
+## UI Router
+
+https://github.com/ui-router/sample-app-ng1
