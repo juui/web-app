@@ -14,3 +14,5 @@ md-button.md-icon-button.md-accent(aria-label="Me gusta")
 ## UI Router
 
 https://github.com/ui-router/sample-app-ng1
+
+mongo ds035786.mlab.com:35786/heroku_xdrvz1pv -u <user> -p <password>
