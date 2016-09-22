@@ -7,22 +7,32 @@ export const juuiHomeState =
 
 export const juuiTopicsState =
 {
-  name: 'topics',
+  name: 'topic',
   url: '/{topic}',
-  component: 'juuiTopics',
+  component: 'juuiTopic',
   resolve: {
-    data: /** @ngInject */
+    topic: /** @ngInject */
       ($stateParams,
        $state,
+       $q,
        juuiAPI)=> {
 
       const topic = $stateParams.topic;
       return juuiAPI.getSubTopicMenu(topic)
         .then((result)=> {
-          return result.data
+          const topic = result.data.topic;
+          if (topic) {
+            return topic;
+          } else {
+            console.error('error');
+            $state.go('home');
+            return $q.reject({});
+          }
         })
         .catch((error)=> {
+          console.error(error);
           $state.go('home');
+          return $q.reject(error);
         });
 
     }
@@ -31,13 +41,14 @@ export const juuiTopicsState =
 
 export const juuiTopicsFunctionsState =
 {
-  name: 'topics.functions',
+  name: 'topic.functions',
   url: '/{subTopic}',
-  component: 'juuiTopicsFunctions',
+  component: 'juuiTopicFunctions',
   resolve: {
-    data: /** @ngInject */
+    subTopicDetails: /** @ngInject */
       ($stateParams,
        $state,
+        $q,
        juuiAPI)=> {
 
       const topic = $stateParams.topic;
@@ -45,10 +56,19 @@ export const juuiTopicsFunctionsState =
 
       return juuiAPI.getSubTopicDetails(topic, subTopic)
         .then((result)=> {
-          return result.data
+          const subTopicDetails = {topic, subTopic};
+          if (subTopicDetails) {
+            return subTopicDetails;
+          } else {
+            console.error('error');
+            $state.go('home');
+            return $q.reject({});
+          }
         })
         .catch((error)=> {
+          console.error(error);
           $state.go('home');
+          return $q.reject({});
         });
 
     }

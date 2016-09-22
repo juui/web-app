@@ -1,0 +1,7 @@
+
+<h1>{{::topicController.title}}</h1>
+<ul>
+  <li ng-repeat="subTopic in ::topicController.subTopics"><a ui-sref-active="active" ui-sref="topic.functions({topic:topicController.juuiId, subTopic:subTopic.juuiId})">{{subTopic.label}}
+      <!--| {{topicController.juuiId}} - {{subTopic.juuiId}}--></a></li>
+</ul>
+<ui-view></ui-view>

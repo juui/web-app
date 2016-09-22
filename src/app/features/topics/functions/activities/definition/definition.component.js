@@ -2,6 +2,9 @@ class FunctionsController {
 
   /** @ngInject */
   constructor() {
+    const subTopicDetails = this._subTopicDetails;
+    this.topic = subTopicDetails.topic;
+    this.subTopic = subTopicDetails.subTopic;
   }
 
   $onInit() {
@@ -14,12 +17,12 @@ class FunctionsController {
 
 }
 
-export const topicsFunctions = {
+export const topicFunctions = {
   bindings: {
-    _data: '<data'
+    _subTopicDetails: '<subTopicDetails'
   },
   template: require('./definition.template.html'),
   controller: FunctionsController,
   controllerAs: 'functionsController',
-  selector: 'juuiTopicsFunctions'
+  selector: 'juuiTopicFunctions'
 };
