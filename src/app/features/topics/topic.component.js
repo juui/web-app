@@ -1,12 +1,15 @@
 class TopicController {
 
   /** @ngInject */
-  constructor() {
+  constructor($location, $anchorScroll) {
     const topic = this._topic;
 
     this.title = topic.label;
     this.juuiId = topic.juuiId;
     this.subTopics = topic.subTopics;
+
+    document.getElementById('main-content').scrollTop = 0;
+
   }
 
   $onInit() {

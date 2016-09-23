@@ -1,5 +1,5 @@
-//const root = 'https://www.juui.org/api/';
-const root = 'http://localhost:3008/api/';
+const root = 'https://www.juui.org/api/';
+//const root = 'http://localhost:3008/api/';
 const topics = {
   getSubTopics: root + 'topics/v1/list',
   getSubTopicDetails: root + 'topics/v1/details',
