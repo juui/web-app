@@ -41,8 +41,8 @@ export const juuiTopicsState =
 
 export const juuiTopicsFunctionsState =
 {
-  name: 'topic.functions',
-  url: '/{subTopic}',
+  name: 'functions',
+  url: '/{topic}/{subTopic}',
   component: 'juuiTopicFunctions',
   resolve: {
     subTopicDetails: /** @ngInject */

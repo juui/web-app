@@ -9,11 +9,12 @@ function runBlock($transitions, $analytics, ng1UIRouter, $trace) {
     $analytics.pageTrack($transition$.router.urlRouter.location);
   });
 
-  vis.visualizer(ng1UIRouter);
+  //vis.visualizer(ng1UIRouter);
 
   $trace.enable(1);
 
   $transitions.onError(true, function(transition) {
+    console.log('$transitions.onError');
     console.log(transition);
   });
 

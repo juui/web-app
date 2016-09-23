@@ -64,12 +64,17 @@ layout-gt-md="row", layout-wrap="", flex="")
       span.md-headline Geometría
       img(src="./../../../asserts/images/svg/topics/geometry-opt.svg")
       div(layout="row", layout-align="end center")
-        //md-button.md-icon-button(aria-label="Ir")
-        //  md-icon()
-        //    | more_vert
-        //md-button.md-icon-button.md-accent(aria-label="Favorite")
-        //  md-icon()
-        //    | favorite
-        md-button.md-accent.md-raised.md-hue-4(ng-disabled="true", aria-label="Ir")
+        md-button.md-primary.md-raised.md-hue-3(aria-label="Ir", ui-sref-active="active", ui-sref="topic({topic:'geometry'})")
+          | Teoría
+        //md-button.md-accent.md-raised.md-hue-4(aria-label="Ir", ui-sref="functions.game-quickTouch")
           | Jugar
+      //div(layout="row", layout-align="end center")
+      //  //md-button.md-icon-button(aria-label="Ir")
+      //  //  md-icon()
+      //  //    | more_vert
+      //  //md-button.md-icon-button.md-accent(aria-label="Favorite")
+      //  //  md-icon()
+      //  //    | favorite
+      //  md-button.md-accent.md-raised.md-hue-4(ng-disabled="true", aria-label="Ir")
+      //    | Jugar
 
