@@ -74,3 +74,39 @@ export const juuiTopicsFunctionsState =
     }
   }
 };
+
+export const juuiTopicsGeometryState =
+{
+  name: 'functions',
+  url: '/{topic}/{subTopic}',
+  component: 'juuiTopicGeometry',
+  resolve: {
+    subTopicDetails: /** @ngInject */
+      ($stateParams,
+       $state,
+       $q,
+       juuiAPI)=> {
+
+      const topic = $stateParams.topic;
+      const subTopic = $stateParams.subTopic;
+
+      return juuiAPI.getSubTopicDetails(topic, subTopic)
+        .then((result)=> {
+          const subTopicDetails = {topic, subTopic};
+          if (subTopicDetails) {
+            return subTopicDetails;
+          } else {
+            console.error('error');
+            $state.go('home');
+            return $q.reject({});
+          }
+        })
+        .catch((error)=> {
+          console.error(error);
+          $state.go('home');
+          return $q.reject({});
+        });
+
+    }
+  }
+};

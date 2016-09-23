@@ -4,7 +4,8 @@ import
 {
   juuiHomeState,
   juuiTopicsState,
-  juuiTopicsFunctionsState
+  juuiTopicsFunctionsState,
+  juuiTopicsGeometryState
 }
   from './app/states/index';
 
@@ -16,7 +17,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   const states = [
     juuiHomeState,
     juuiTopicsState,
-    juuiTopicsFunctionsState
+    juuiTopicsFunctionsState,
+    juuiTopicsGeometryState
   ];
 
   states.forEach(function (state) {
