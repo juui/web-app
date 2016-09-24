@@ -30,7 +30,7 @@ import {footer} from './app/features/dashboard/footer.component';
 import {home} from './app/features/home/home.component';
 
 import {topic} from './app/features/topics/topic.component';
-import {topicFunctions} from './app/features/topics/functions/activities/definition/definition.component';
+import {topicFunctions} from './app/features/topics/functions/functions.component';
 
 angular
   .module(app,

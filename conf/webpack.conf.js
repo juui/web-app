@@ -46,33 +46,36 @@ module.exports = {
       }
     ]
   },
-  imageWebpackLoader: {
-    pngquant:{
-      quality: "65-90",
-      speed: 4
-    },
-    svgo:{
-      plugins: [
-        {
-          removeViewBox: false
-        },
-        {
-          removeEmptyAttrs: false
-        }
-      ]
-    }
-  },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html'),
       inject: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      debug: true,
+      options: {
+        imageWebpackLoader: {
+          pngquant:{
+            quality: "65-90",
+            speed: 4
+          },
+          svgo:{
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          }
+        },
+        postcss: () => [autoprefixer]
+      }
     })
   ],
-  postcss: () => [autoprefixer],
-  debug: true,
-  //devtool: 'cheap-module-eval-source-map',
   devtool: "source-map",
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),

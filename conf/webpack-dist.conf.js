@@ -101,9 +101,29 @@ module.exports = {
         compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
       }
     ),
-    new ExtractTextPlugin('index-[contenthash].css')
+    new ExtractTextPlugin('index-[contenthash].css'),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        imageWebpackLoader: {
+          pngquant:{
+            quality: "65-90",
+            speed: 4
+          },
+          svgo:{
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          }
+        },
+        postcss: () => [autoprefixer]
+      }
+    })
   ],
-  postcss: () => [autoprefixer],
   output: {
     path: path.join(process.cwd(), conf.paths.dist),
     filename: '[name]-[hash].js'
