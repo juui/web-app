@@ -52,28 +52,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html'),
       inject: true
-    }),
-    new webpack.LoaderOptionsPlugin({
-      debug: true,
-      options: {
-        imageWebpackLoader: {
-          pngquant:{
-            quality: "65-90",
-            speed: 4
-          },
-          svgo:{
-            plugins: [
-              {
-                removeViewBox: false
-              },
-              {
-                removeEmptyAttrs: false
-              }
-            ]
-          }
-        },
-        postcss: () => [autoprefixer]
-      }
     })
   ],
   devtool: "source-map",
