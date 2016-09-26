@@ -1,13 +1,44 @@
-div(layout='column', layout-padding="", layout-margin="")
-  br()
-  div(layout='row')
-    div(flex='10', layout='column', layout-align='center center')
-      span.md-body-1 Cantidad de lados
-    md-slider.md-primary(flex='', md-discrete='',
-    ng-model='geometryController.sides', step='1',
-    min='{{::geometryController.MIN_SIDES}}',
-    max='{{::geometryController.MAX_SIDES}}',
-    aria-label='sides')
+div(layout-gt-sm='row', layout='column', flex="")
+  md-divider()
+  div(flex-gt-sm='50')
+    div(layout='column', layout-padding="", layout-margin="")
+      div(layout='column')
+        div(layout='column', layout-align='center center')
+          span.md-body-1 Cantidad de lados {{geometryController.sides}}
+        md-slider(flex='', md-discrete='',
+        ng-model='geometryController.sides', step='1',
+        min='{{::geometryController.MIN_SIDES}}',
+        max='{{::geometryController.MAX_SIDES}}',
+        aria-label='sides')
+
+  //md-divider()
+  div(flex='')
+    div()
+
+//div(layout='column', layout-padding="", layout-margin="")
+//  br()
+//  div(layout='row')
+//    div(flex='10', layout='column', layout-align='center center')
+//      span.md-body-1 Cantidad de lados
+//    md-slider(flex='', md-discrete='',
+//    ng-model='geometryController.sides', step='1',
+//    min='{{::geometryController.MIN_SIDES}}',
+//    max='{{::geometryController.MAX_SIDES}}',
+//    aria-label='sides')
+//    md-input-container(flex='5')
+//      input(type='number', ng-model='geometryController.sides', aria-label='red', aria-controls='sides')
+//
+//
+//  md-slider-container()
+//    div(layout-gt-sm='row', layout='column')
+//      span Cantidad de lados
+//      md-slider(flex='', md-discrete='',
+//      ng-model='geometryController.sides', step='1',
+//      min='{{::geometryController.MIN_SIDES}}',
+//      max='{{::geometryController.MAX_SIDES}}',
+//      aria-label='sides')
+//      md-input-container
+//        input(flex='', type='number', ng-model='geometryController.sides', aria-label='red', aria-controls='sides')
 
 
 //h1
