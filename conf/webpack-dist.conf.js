@@ -10,13 +10,6 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    preLoaders: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint'
-      // }
-    ],
     loaders: [
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
@@ -53,22 +46,6 @@ module.exports = {
         ]
       }
     ]
-  },
-  imageWebpackLoader: {
-    pngquant:{
-      quality: "65-90",
-      speed: 4
-    },
-    svgo:{
-      plugins: [
-        {
-          removeViewBox: false
-        },
-        {
-          removeEmptyAttrs: false
-        }
-      ]
-    }
   },
   plugins: [
     new DebugWebpackPlugin({

@@ -1,8 +1,8 @@
-div(layout='column')
+div(layout='column', layout-padding="", layout-margin="")
   br()
   div(layout='row')
-    //div(flex='10', layout='column', layout-align='center center')
-      span.md-body-1 md-primary
+    div(flex='10', layout='column', layout-align='center center')
+      span.md-body-1 Cantidad de lados
     md-slider.md-primary(flex='', md-discrete='',
     ng-model='geometryController.sides', step='1',
     min='{{::geometryController.MIN_SIDES}}',
