@@ -11,6 +11,8 @@ import 'angulartics';
 import 'angulartics-google-analytics';
 
 import 'angular-ui-router';
+import 'snapsvg-cjs';
+
 import routesConfig from './routes';
 import runBlock from './runBlock';
 import settings from './settings'
