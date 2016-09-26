@@ -1,4 +1,16 @@
-h1
+div(layout='column')
+  br()
+  div(layout='row')
+    //div(flex='10', layout='column', layout-align='center center')
+      span.md-body-1 md-primary
+    md-slider.md-primary(flex='', md-discrete='',
+    ng-model='geometryController.sides', step='1',
+    min='{{::geometryController.MIN_SIDES}}',
+    max='{{::geometryController.MAX_SIDES}}',
+    aria-label='sides')
+
+
+//h1
   | {{::functionsController.topic}} - {{functionsController.subTopic}}
 //div(layout-align="center center", layout-gt-md="row")
 //  div.bg-green(flex-xm="100",

@@ -31,6 +31,7 @@ import {home} from './app/features/home/home.component';
 
 import {topic} from './app/features/topics/topic.component';
 import {topicFunctions} from './app/features/topics/functions/functions.component';
+import {topicGeometry} from './app/features/topics/geometry/geometry.component';
 
 angular
   .module(app,
@@ -56,6 +57,7 @@ angular
   .component('juuiFooter', footer)
   .component('juuiHome', home)
   .component('juuiTopic', topic)
-  .component('juuiTopicFunctions', topicFunctions);
+  .component('juuiTopicFunctions', topicFunctions)
+  .component('juuiTopicGeometry', topicGeometry);
 
 

@@ -49,6 +49,28 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      debug: true,
+      options: {
+        imageWebpackLoader: {
+          pngquant:{
+            quality: "65-90",
+            speed: 4
+          },
+          svgo:{
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          }
+        },
+        postcss: () => [autoprefixer]
+      }
+    }),
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html'),
       inject: true

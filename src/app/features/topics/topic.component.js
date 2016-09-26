@@ -1,7 +1,7 @@
 class TopicController {
 
   /** @ngInject */
-  constructor($location, $anchorScroll) {
+  constructor() {
     const topic = this._topic;
 
     this.title = topic.label;

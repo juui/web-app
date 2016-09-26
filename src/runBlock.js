@@ -3,7 +3,7 @@ import * as vis from 'ui-router-visualizer';
 export default runBlock;
 
 /** @ngInject */
-function runBlock($transitions, $analytics, ng1UIRouter, $trace) {
+function runBlock($transitions, $analytics, $trace) {
 
   $transitions.onSuccess(true,function($transition$) {
     $analytics.pageTrack($transition$.router.urlRouter.location);
