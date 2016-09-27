@@ -4,6 +4,7 @@ class ToolbarController {
   constructor($mdSidenav) {
 
     this._$mdSidenav = $mdSidenav;
+    this.title = 'Juui';
 
   }
 
