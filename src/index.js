@@ -1,5 +1,7 @@
 import angular from 'angular';
 
+import 'font-awesome/css/font-awesome.css';
+
 import 'angular-material/angular-material.css';
 import 'angular-aria';
 import 'angular-animate';
@@ -24,6 +26,7 @@ export const app = 'app';
 
 import './index.styl';
 import './app/features/home/home.styles.styl'
+import './app/features/login/login.styles.styl'
 
 import {dashboard} from './app/features/dashboard/dashboard.component';
 import {toolbar} from './app/features/dashboard/toolbar.component';

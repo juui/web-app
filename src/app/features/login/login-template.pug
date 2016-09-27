@@ -1,37 +1,76 @@
-md-dialog(aria-label="Ingresar")
-  form
+//md-dialog(aria-label="Login")
+//  form(ng-cloak='')
+//    md-toolbar
+//      .md-toolbar-tools
+//        h2 Ingresar
+//        span(flex="")
+//        md-button.md-icon-button.top-button(aria-label="Cerrar", ng-click="loginController.close('close')")
+//          ng-md-icon(icon="close", size="24", options="{duration: 375}", style="fill: white")
+//    md-dialog-content
+//      .md-dialog-content
+//        div(layout = "column", layout-margin ="", layout-padding = "", hide-xs = "")
+//          .social-buttons()
+//            a.social-button.facebook.md-whiteframe-1dp(href="https://www.juui.org/auth/facebook")
+//              i.fa.fa-facebook
+//            a.social-button.twitter.md-whiteframe-1dp(href="https://www.juui.org/auth/twitter")
+//              i.fa.fa-twitter
+//            a.social-button.google.md-whiteframe-1dp(href="https://www.juui.org/auth/google")
+//              i.fa.fa-google-plus
+//
+//        div(hide-gt-xs="")
+//          div(layout="row", layout-align="space-around center", layout-margin ="", layout-padding = "")
+//            md-button.md-icon-button.top-button.md-fab.facebook(aria-label="Facebook",
+//            href="https://www.juui.org/auth/facebook")
+//              ng-md-icon(icon="facebook", size="24", options="{duration: 375}", style="fill: white")
+//            md-button.md-icon-button.top-button.md-fab.twitter(aria-label="Twitter", href="https://www.juui.org/auth/twitter")
+//              ng-md-icon(icon="twitter", size="24", options="{duration: 375}", style="fill: white")
+//
+//          div(layout="row", layout-align="space-around center", layout-margin ="", layout-padding = "")
+//            md-button.md-icon-button.top-button.md-fab.google(aria-label="Google Plus", href="https://www.juui.org/auth/google")
+//              ng-md-icon(icon="google-plus", size="24", options="{duration: 375}", style="fill: white")
+//
+//        //br
+//        //div(layout="row", layout-sm="column")
+//
+//    .md-dialog-actions()
+//      span(flex='')
+//      md-button.md-primary(ng-click="loginController.close('close')")
+//        | Regresar
+
+md-dialog(aria-label='login')
+  form(ng-cloak='')
     md-toolbar
       .md-toolbar-tools
-        h2 Ingresar
-        span(flex="")
-        md-button.md-icon-button.top-button(aria-label="Cerrar", ng-click="loginController.close('close')")
-          ng-md-icon(icon="close", size="24", options="{duration: 375}", style="fill: white")
-    div()
-      div(layout = "column", layout-margin ="", layout-padding = "", hide-xs = "")
-        .social-buttons()
-          a.social-button.facebook.md-whiteframe-1dp(href="https://www.juui.org/auth/facebook")
-            i.fa.fa-facebook
-          a.social-button.twitter.md-whiteframe-1dp(href="https://www.juui.org/auth/twitter")
-            i.fa.fa-twitter
-          a.social-button.google.md-whiteframe-1dp(href="https://www.juui.org/auth/google")
-            i.fa.fa-google-plus
+        h2.juui-main-title Ingresar
+        span(flex='')
+        md-button.md-icon-button(ng-click='close()')
+          md-icon.juui-primary()
+            | close
 
-      div(hide-gt-xs="")
-        div(layout="row", layout-align="space-around center", layout-margin ="", layout-padding = "")
-          md-button.md-icon-button.top-button.md-fab.facebook(aria-label="Facebook",
-          href="https://www.juui.org/auth/facebook")
-            ng-md-icon(icon="facebook", size="24", options="{duration: 375}", style="fill: white")
-          md-button.md-icon-button.top-button.md-fab.twitter(aria-label="Twitter", href="https://www.juui.org/auth/twitter")
-            ng-md-icon(icon="twitter", size="24", options="{duration: 375}", style="fill: white")
+    md-dialog-content
+      .md-dialog-content
+        div(layout = "column", layout-margin ="", layout-padding = "", hide-xs = "")
+          .social-buttons()
+            a.social-button.facebook.md-whiteframe-1dp(href="https://www.juui.org/auth/facebook")
+              i.fa.fa-facebook
+            a.social-button.twitter.md-whiteframe-1dp(href="https://www.juui.org/auth/twitter")
+              i.fa.fa-twitter
+            a.social-button.google.md-whiteframe-1dp(href="https://www.juui.org/auth/google")
+              i.fa.fa-google-plus
 
-        div(layout="row", layout-align="space-around center", layout-margin ="", layout-padding = "")
-          md-button.md-icon-button.top-button.md-fab.google(aria-label="Google Plus", href="https://www.juui.org/auth/google")
-            ng-md-icon(icon="google-plus", size="24", options="{duration: 375}", style="fill: white")
+        div(hide-gt-xs="")
+          div(layout="row", layout-align="space-around center", layout-margin ="", layout-padding = "")
+            md-button.md-icon-button.top-button.md-fab.facebook(aria-label="Facebook",
+            href="https://www.juui.org/auth/facebook")
+              ng-md-icon(icon="facebook", size="24", options="{duration: 375}", style="fill: white")
+            md-button.md-icon-button.top-button.md-fab.twitter(aria-label="Twitter", href="https://www.juui.org/auth/twitter")
+              ng-md-icon(icon="twitter", size="24", options="{duration: 375}", style="fill: white")
 
-      br
-      div(layout="row", layout-sm="column")
+          div(layout="row", layout-align="space-around center", layout-margin ="", layout-padding = "")
+            md-button.md-icon-button.top-button.md-fab.google(aria-label="Google Plus", href="https://www.juui.org/auth/google")
+              ng-md-icon(icon="google-plus", size="24", options="{duration: 375}", style="fill: white")
 
-    .md-actions(layout="row")
-      span(flex="")
-      md-button.md-primary(ng-click="loginController.close('close')")
+    md-dialog-actions(layout='row')
+      span(flex='')
+      md-button.md-primary(ng-click="close()", md-autofocus='')
         | Regresar

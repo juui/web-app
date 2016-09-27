@@ -12,6 +12,22 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file'
+      },
+      {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
         loaders: [
           'file?hash=sha512&digest=hex&name=[hash].[ext]',
@@ -78,15 +94,15 @@ module.exports = {
         compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
       }
     ),
-    new ExtractTextPlugin('index-[contenthash].css'),
+    new ExtractTextPlugin({ filename: 'index-[contenthash].css', 'omit':1,'extract':true,'remove':true}),
     new webpack.LoaderOptionsPlugin({
       options: {
         imageWebpackLoader: {
-          pngquant:{
-            quality: "65-90",
+          pngquant: {
+            quality: '65-90',
             speed: 4
           },
-          svgo:{
+          svgo: {
             plugins: [
               {
                 removeViewBox: false
@@ -109,6 +125,11 @@ module.exports = {
   entry: {
     app: `./${conf.path.src('index')}`,
     vendor: Object.keys(pkg.dependencies)
+  },
+  resolve: {
+    extensions: ['', '.js'],
+    alias: {
+      'font-awesome.css': path.join('./node_modules/', '/font-awesome/css/font-awesome.min.css')
+    }
   }
-}
-;
+};
