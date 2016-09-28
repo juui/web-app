@@ -126,10 +126,10 @@ module.exports = {
     app: `./${conf.path.src('index')}`,
     vendor: Object.keys(pkg.dependencies)
   },
-  resolve: {
-    extensions: ['', '.js'],
-    alias: {
-      'font-awesome.css': path.join('./node_modules/', '/font-awesome/css/font-awesome.min.css')
-    }
+  stats: {
+    colors: true,
+    modules: true,
+    reasons: true,
+    errorDetails: true
   }
 };

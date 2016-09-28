@@ -9,11 +9,9 @@
     "angular-ui-router": "^1.0.0-beta.3",
     "angulartics": "^1.2.1",
     "angulartics-google-analytics": "^0.2.1",
-    "font-awesome": "^4.6.3",
     "snapsvg-cjs": "0.0.4",
     "socket.io-client": "^1.4.8",
-    "ui-router-visualizer": "^2.0.11",
-    "url-loader": "^0.5.7"
+    "ui-router-visualizer": "^2.0.11"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0-beta.2",
@@ -36,6 +34,7 @@
     "eslint-plugin-angular": "^1.4.1",
     "eslint-plugin-babel": "^3.1.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
+    "font-awesome": "^4.6.3",
     "gulp": "gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
     "gulp-angular-filesort": "^1.1.1",
     "gulp-angular-templatecache": "^2.0.0",
@@ -67,6 +66,7 @@
     "style-loader": "^0.13.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.0",
+    "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.22"
   },
   "scripts": {
