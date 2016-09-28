@@ -123,8 +123,8 @@ module.exports = {
   }
   ,
   entry: {
-    app: `./${conf.path.src('index')}`,
-    vendor: Object.keys(pkg.dependencies)
+    app: `./${conf.path.src('index')}`
+    //vendor: Object.keys(pkg.dependencies)
   },
   stats: {
     colors: true,
