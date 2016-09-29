@@ -10,14 +10,23 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    preLoaders: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint'
-      // }
-    ],
     loaders: [
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file'
+      },
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
         loaders: [
@@ -54,22 +63,6 @@ module.exports = {
       }
     ]
   },
-  imageWebpackLoader: {
-    pngquant:{
-      quality: "65-90",
-      speed: 4
-    },
-    svgo:{
-      plugins: [
-        {
-          removeViewBox: false
-        },
-        {
-          removeEmptyAttrs: false
-        }
-      ]
-    }
-  },
   plugins: [
     new DebugWebpackPlugin({
 
@@ -101,17 +94,42 @@ module.exports = {
         compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
       }
     ),
-    new ExtractTextPlugin('index-[contenthash].css')
+    new ExtractTextPlugin({ filename: 'index-[contenthash].css', 'omit':1,'extract':true,'remove':true}),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        imageWebpackLoader: {
+          pngquant: {
+            quality: '65-90',
+            speed: 4
+          },
+          svgo: {
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          }
+        },
+        postcss: () => [autoprefixer]
+      }
+    })
   ],
-  postcss: () => [autoprefixer],
   output: {
     path: path.join(process.cwd(), conf.paths.dist),
     filename: '[name]-[hash].js'
   }
   ,
   entry: {
-    app: `./${conf.path.src('index')}`,
-    vendor: Object.keys(pkg.dependencies)
+    app: `./${conf.path.src('index')}`
+    //vendor: Object.keys(pkg.dependencies)
+  },
+  stats: {
+    colors: true,
+    modules: true,
+    reasons: true,
+    errorDetails: true
   }
-}
-;
+};

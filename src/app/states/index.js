@@ -42,7 +42,7 @@ export const juuiTopicsState =
 export const juuiTopicsFunctionsState =
 {
   name: 'functions',
-  url: '/{topic}/{subTopic}',
+  url: '/functions/{subTopic}',
   component: 'juuiTopicFunctions',
   resolve: {
     subTopicDetails: /** @ngInject */
@@ -51,7 +51,7 @@ export const juuiTopicsFunctionsState =
         $q,
        juuiAPI)=> {
 
-      const topic = $stateParams.topic;
+      const topic = 'functions';
       const subTopic = $stateParams.subTopic;
 
       return juuiAPI.getSubTopicDetails(topic, subTopic)
@@ -77,8 +77,8 @@ export const juuiTopicsFunctionsState =
 
 export const juuiTopicsGeometryState =
 {
-  name: 'functions',
-  url: '/{topic}/{subTopic}',
+  name: 'geometry',
+  url: '/geometry/{subTopic}',
   component: 'juuiTopicGeometry',
   resolve: {
     subTopicDetails: /** @ngInject */
@@ -87,7 +87,7 @@ export const juuiTopicsGeometryState =
        $q,
        juuiAPI)=> {
 
-      const topic = $stateParams.topic;
+      const topic = 'geometry';
       const subTopic = $stateParams.subTopic;
 
       return juuiAPI.getSubTopicDetails(topic, subTopic)

@@ -21,7 +21,8 @@ exports.paths = {
   dist: 'dist',
   tmp: '.tmp',
   e2e: 'e2e',
-  tasks: 'gulp_tasks'
+  tasks: 'gulp_tasks',
+  external: path.join(__dirname, './node_modules/')
 };
 
 exports.path = {};

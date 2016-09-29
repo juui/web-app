@@ -1,4 +1,22 @@
-md-toolbar.md-whiteframe-glow-z1()
+md-toolbar.md-whiteframe-glow-z1(md-scroll-shrink='')
   .md-toolbar-tools(tabindex='-1')
     md-button.md-icon-button.md-no-focus(ng-click="toolbarController.toggleSidenav('left')", ng-disabled='', aria-label='Open Menu')
       ng-md-icon(icon='menu', size='24')
+
+    h1.md-title.juui-main-title {{::toolbarController.title}}
+    div(layout="row", flex ="", layout-align="end center")
+      md-menu(layout="row", flex ="", layout-align="end center", md-position-mode="target-right target", hide-gt-sm="")
+        md-button.md-icon-button.top-button.juui-menu-button(aria-label="Settings", ng-click="$mdOpenMenu()")
+          md-icon.juui-primary(md-menu-origin="")
+            | more_vert
+          md-icon()
+        md-menu-content(width="3", ng-click="")
+          md-menu-item()
+            md-button.md-primary(ng-click="toolbarController.showLoginForm($event)")
+              div(layout="row")
+                p(flex="") Ingresar&#160;
+                md-icon.md-primary(md-menu-origin = "")
+                  | insert_emoticon
+    div(layout="row", layout-sm="column", flex ="", layout-align="end center", hide-xs = "", hide-sm = "")
+      md-button.md-primary.md-raised.md-hue-2(ng-click="toolbarController.showLoginForm($event)")
+        | Ingresar

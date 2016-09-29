@@ -9,6 +9,22 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      },
+      {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
         loaders: [
           'file?hash=sha512&digest=hex&name=[hash].[ext]',
@@ -46,37 +62,43 @@ module.exports = {
       }
     ]
   },
-  imageWebpackLoader: {
-    pngquant:{
-      quality: "65-90",
-      speed: 4
-    },
-    svgo:{
-      plugins: [
-        {
-          removeViewBox: false
-        },
-        {
-          removeEmptyAttrs: false
-        }
-      ]
-    }
-  },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      debug: true,
+      options: {
+        imageWebpackLoader: {
+          pngquant: {
+            quality: "65-90",
+            speed: 4
+          },
+          svgo: {
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          }
+        },
+        postcss: () => [autoprefixer]
+      }
+    }),
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html'),
       inject: true
     })
   ],
-  postcss: () => [autoprefixer],
-  debug: true,
-  //devtool: 'cheap-module-eval-source-map',
   devtool: "source-map",
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),
+    publicPath: '',
     filename: 'index.js'
   },
-  entry: `./${conf.path.src('index')}`
+  entry: {
+    main: `./${conf.path.src('index')}`
+  }
 };
