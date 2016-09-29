@@ -1,8 +1,7 @@
 import * as io from 'socket.io-client';
 
-console.log(io);
-//const root = 'https://www.juui.org/api/';
-const root = 'http://localhost:3008';
+const root = 'https://www.juui.org';
+//const root = 'http://localhost:3008';
 
 class juuiSocket {
 
