@@ -12,6 +12,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.pug$/,
+        loader: 'pug'
+      },
+      {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url?limit=10000&mimetype=application/font-woff'
       },
@@ -86,7 +90,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html'),
+      template: conf.path.src('index.pug'),
       inject: true
     }),
     new webpack.optimize.UglifyJsPlugin(
@@ -94,7 +98,7 @@ module.exports = {
         compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
       }
     ),
-    new ExtractTextPlugin({ filename: 'index-[contenthash].css', 'omit':1,'extract':true,'remove':true}),
+    new ExtractTextPlugin({filename: 'index-[contenthash].css', 'omit': 1, 'extract': true, 'remove': true}),
     new webpack.LoaderOptionsPlugin({
       options: {
         imageWebpackLoader: {
