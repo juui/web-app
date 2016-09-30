@@ -1,8 +1,13 @@
-//const root = 'https://www.juui.org/api/';
-const root = 'http://localhost:3008/api/';
+const root = 'https://www.juui.org';
+//const root = 'http://localhost:3008';
+
+const auth = {
+  check: root + '/auth'
+};
+
 const topics = {
-  getSubTopics: root + 'topics/v1/list',
-  getSubTopicDetails: root + 'topics/v1/details',
+  getSubTopics: root + '/api/topics/v1/list',
+  getSubTopicDetails: root + '/api/topics/v1/details',
 };
 
 class juuiAPI {
@@ -30,6 +35,10 @@ class juuiAPI {
         subTopic
       }
     });
+  }
+
+  checkAuth() {
+    return this._$http.post(auth.check);
   }
 
 }

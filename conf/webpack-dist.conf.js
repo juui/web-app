@@ -94,7 +94,7 @@ module.exports = {
         compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
       }
     ),
-    new ExtractTextPlugin({ filename: 'index-[contenthash].css', 'omit':1,'extract':true,'remove':true}),
+    new ExtractTextPlugin({filename: 'index-[contenthash].css', 'omit': 1, 'extract': true, 'remove': true}),
     new webpack.LoaderOptionsPlugin({
       options: {
         imageWebpackLoader: {
