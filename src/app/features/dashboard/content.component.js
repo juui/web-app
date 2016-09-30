@@ -4,6 +4,6 @@ class ContentController {
 }
 
 export const content = {
-  template: require('./content.template.html'),
+  template: require('./content.template.pug'),
   controller: ContentController
 };

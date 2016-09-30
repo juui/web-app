@@ -26,7 +26,7 @@ export const topic = {
   bindings: {
     _topic: '<topic'
   },
-  template: require('./topic.template.html'),
+  template: require('./topic.template.pug'),
   controller: TopicController,
   controllerAs: 'topicController',
   selector: 'juuiTopic'

@@ -39,7 +39,7 @@ class HomeController {
 }
 
 export const home = {
-  template: require('./home.template.html'),
+  template: require('./home.template.pug'),
   controller: HomeController,
   controllerAs: 'homeController',
   selector: 'juuiHome'
