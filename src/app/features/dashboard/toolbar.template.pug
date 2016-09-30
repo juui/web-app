@@ -12,8 +12,8 @@ md-toolbar.md-whiteframe-glow-z1(md-scroll-shrink='')
           md-icon()
         md-menu-content(width="3", ng-click="")
 
-          md-menu-item()
-            md-button.md-primary(ng-click="toolbarController.showLoginForm($event)", ng-hide='toolbarController.auth.isLoggedIn')
+          md-menu-item(ng-hide='toolbarController.auth.isLoggedIn')
+            md-button.md-primary(ng-click="toolbarController.showLoginForm($event)")
               div(layout="row")
                 p(flex="") Ingresar&#160;
                 md-icon.md-primary(md-menu-origin = "")
