@@ -27,7 +27,7 @@ md-toolbar.md-whiteframe-glow-z1(md-scroll-shrink='')
                   | exit_to_app
 
     div(layout="row", layout-sm="column", flex ="", layout-align="end center", hide-xs = "", hide-sm = "")
-      md-button.md-primary.md-raised.md-hue-2(ng-click="toolbarController.showLoginForm($event)", ng-hide='toolbarController.auth.isLoggedIn')
+      md-button.md-accent.md-raised.md-hue-4(ng-click="toolbarController.showLoginForm($event)", ng-hide='toolbarController.auth.isLoggedIn')
         | Ingresar
-      md-button.md-warn.md-raised.md-hue-2(href="https://www.juui.org/logout", ng-show='toolbarController.auth.isLoggedIn')
+      md-button.md-primary.md-raised.md-hue-1(href="https://www.juui.org/logout", ng-show='toolbarController.auth.isLoggedIn')
         | Salir
