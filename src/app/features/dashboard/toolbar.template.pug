@@ -11,14 +11,23 @@ md-toolbar.md-whiteframe-glow-z1(md-scroll-shrink='')
             | more_vert
           md-icon()
         md-menu-content(width="3", ng-click="")
+
           md-menu-item()
-            md-button.md-primary(ng-click="toolbarController.showLoginForm($event)")
+            md-button.md-primary(ng-click="toolbarController.showLoginForm($event)", ng-hide='toolbarController.auth.isLoggedIn')
               div(layout="row")
                 p(flex="") Ingresar&#160;
                 md-icon.md-primary(md-menu-origin = "")
                   | insert_emoticon
+
+          md-menu-item(ng-show='toolbarController.auth.isLoggedIn')
+            md-button.md-primary(href="https://www.juui.org/logout")
+              div(layout="row")
+                p(flex="") Salir&#160;
+                md-icon.md-primary(md-menu-origin = "")
+                  | logout
+
     div(layout="row", layout-sm="column", flex ="", layout-align="end center", hide-xs = "", hide-sm = "")
-      md-button.md-primary.md-raised.md-hue-2(ng-click="toolbarController.showLoginForm($event)")
+      md-button.md-primary.md-raised.md-hue-2(ng-click="toolbarController.showLoginForm($event)", ng-hide='toolbarController.auth.isLoggedIn')
         | Ingresar
-      md-button.md-warn.md-raised.md-hue-2(href="https://www.juui.org/logout")
+      md-button.md-warn.md-raised.md-hue-2(href="https://www.juui.org/logout", ng-show='toolbarController.auth.isLoggedIn')
         | Salir

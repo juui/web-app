@@ -3,6 +3,9 @@ class DashboardController {
   /** @ngInject */
   constructor(juuiAPI) {
     this._juuiAPI = juuiAPI;
+    this.auth = {
+      isLoggedIn: false
+    };
   }
 
   $onInit() {
@@ -12,7 +15,8 @@ class DashboardController {
     this._juuiAPI.checkAuth()
       .then((result)=>{
         console.log('check session');
-        console.log(result.data);
+        this.auth = result.data;
+        console.log(this.auth);
       })
       .catch((error)=>{
         console.log(error);

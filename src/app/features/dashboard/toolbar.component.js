@@ -9,6 +9,12 @@ class ToolbarController {
 
   }
 
+  $onInit() {
+    console.log('Init', 'toolbarController');
+    console.log(this);
+
+  }
+
   toggleSidenav(menuId) {
 
     console.log('toggle');
@@ -55,6 +61,9 @@ class ToolbarController {
 }
 
 export const toolbar = {
+  bindings: {
+    auth: '<juuiAuth'
+  },
   template: require('./toolbar.template.html'),
   controller: ToolbarController,
   controllerAs: 'toolbarController',
