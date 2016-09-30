@@ -21,7 +21,7 @@ export const topicFunctions = {
   bindings: {
     _subTopicDetails: '<subTopicDetails'
   },
-  template: require('./functions.template.pug'),
+  template: require('./functions.template.html'),
   controller: FunctionsController,
   controllerAs: 'functionsController',
   selector: 'juuiTopicFunctions'

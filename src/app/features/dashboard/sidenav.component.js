@@ -19,7 +19,7 @@ class SidenavController {
 }
 
 export const sidenav = {
-  template: require('./sidenav.template.pug'),
+  template: require('./sidenav.template.html'),
   controller: SidenavController,
   controllerAs: 'sidenavController',
   selector: 'juuiSidenav'

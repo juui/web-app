@@ -12,10 +12,6 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.pug$/,
-        loader: 'pug'
-      },
-      {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url?limit=10000&mimetype=application/font-woff'
       },
@@ -90,7 +86,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.pug'),
+      template: conf.path.src('index.html'),
       inject: true
     }),
     new webpack.optimize.UglifyJsPlugin(

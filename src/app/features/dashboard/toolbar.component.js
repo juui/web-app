@@ -38,7 +38,7 @@ class ToolbarController {
 
       },
       controllerAs: 'loginController',
-      template: require('./../login/login-template.pug'),
+      template: require('./../login/login-template.html'),
       parent: angular.element(document.body),
       targetEvent: event,
       clickOutsideToClose: true,
@@ -55,7 +55,7 @@ class ToolbarController {
 }
 
 export const toolbar = {
-  template: require('./toolbar.template.pug'),
+  template: require('./toolbar.template.html'),
   controller: ToolbarController,
   controllerAs: 'toolbarController',
   selector: 'juuiToolbar'

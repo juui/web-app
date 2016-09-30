@@ -26,7 +26,7 @@ class DashboardController {
 }
 
 export const dashboard = {
-  template: require('./dashboard.template.pug'),
+  template: require('./dashboard.template.html'),
   controller: DashboardController,
   controllerAs: 'dashboardController',
   selector: 'juui-dashboard'

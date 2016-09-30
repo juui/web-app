@@ -130,7 +130,7 @@ export const topicGeometry = {
   bindings: {
     _subTopicDetails: '<subTopicDetails'
   },
-  template: require('./geometry.template.pug'),
+  template: require('./geometry.template.html'),
   controller: GeometryController,
   controllerAs: 'geometryController',
   selector: 'juuiTopicGeometry'

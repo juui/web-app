@@ -4,6 +4,6 @@ class FooterController {
 }
 
 export const footer = {
-  template: require('./footer.template.pug'),
+  template: require('./footer.template.html'),
   controller: FooterController
 };
