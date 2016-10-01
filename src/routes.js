@@ -2,10 +2,10 @@ export default routesConfig;
 
 import
 {
-  juuiHomeState,
-  juuiTopicsState,
-  juuiTopicsFunctionsState,
-  juuiTopicsGeometryState
+  juuiHomeStates,
+  juuiTopicsStates,
+  juuiTopicsFunctionsStates,
+  juuiTopicsGeometryStates
 }
   from './app/states/index';
 
@@ -15,10 +15,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   const states = [
-    juuiHomeState,
-    juuiTopicsState,
-    juuiTopicsFunctionsState,
-    juuiTopicsGeometryState
+    ...juuiHomeStates,
+    ...juuiTopicsStates,
+    ...juuiTopicsFunctionsStates,
+    ...juuiTopicsGeometryStates
   ];
 
   states.forEach(function (state) {

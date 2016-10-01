@@ -1,0 +1,23 @@
+div(layout-gt-sm='row', layout='column', flex="")
+  md-divider()
+  div(flex-gt-sm='50')
+    div(layout='column', layout-padding="", layout-margin="")
+      div(layout='column')
+        div(layout='row', layout-align='center center')
+          span.md-body-1 Los polígonos regulares según sus lados se denominan:
+        br()
+        md-slider(flex='', md-discrete='',
+        ng-model='geometryController.sides', step='1',
+        min='{{::geometryController.MIN_SIDES}}',
+        max='{{::geometryController.MAX_SIDES}}',
+        aria-label='sides',
+        ng-change="geometryController.onChangeSides(geometryController.sides)")
+
+  //md-divider()
+  div(flex='')
+    div(flex="100")
+      .svg-container-animation
+        svg.svg-responsive#svg(width="100%", height="100%", viewBox="0 0 300 250")
+      div(layout='row', layout-align='center center')
+        h4 {{geometryController.name}}: {{geometryController.sides}} lados
+

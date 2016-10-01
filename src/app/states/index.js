@@ -1,112 +1,120 @@
-export const juuiHomeState =
-{
-  name: 'home',
-  url: '/',
-  component: 'juuiHome'
-};
+export const juuiHomeStates =
+  [
+    {
+      name: 'home',
+      url: '/',
+      component: 'juuiHome'
+    }
+  ];
 
-export const juuiTopicsState =
-{
-  name: 'topic',
-  url: '/{topic}',
-  component: 'juuiTopic',
-  resolve: {
-    topic: /** @ngInject */
-      ($stateParams,
-       $state,
-       $q,
-       juuiAPI)=> {
+export const juuiTopicsStates =
+  [
+    {
+      name: 'topic',
+      url: '/{topic}',
+      component: 'juuiTopic',
+      resolve: {
+        topic: /** @ngInject */
+          ($stateParams,
+           $state,
+           $q,
+           juuiAPI)=> {
 
-      const topic = $stateParams.topic;
-      return juuiAPI.getSubTopicMenu(topic)
-        .then((result)=> {
-          const topic = result.data.topic;
-          if (topic) {
-            return topic;
-          } else {
-            console.error('error');
+          const topic = $stateParams.topic;
+          return juuiAPI.getSubTopicMenu(topic)
+            .then((result)=> {
+              const topic = result.data.topic;
+              if (topic) {
+                return topic;
+              } else {
+                console.error('error');
+                $state.go('home');
+                return $q.reject({});
+              }
+            })
+            .catch((error)=> {
+              console.error(error);
+              $state.go('home');
+              return $q.reject(error);
+            });
+
+        }
+      }
+    }
+  ];
+
+export const juuiTopicsFunctionsStates =
+  [
+    {
+      name: 'functions',
+      url: '/functions/{subTopic}',
+      component: 'juuiTopicFunctions',
+      resolve: {
+        subTopicDetails: /** @ngInject */
+          ($stateParams,
+           $state,
+           $q,
+           juuiAPI)=> {
+
+          const topic = 'functions';
+          const subTopic = $stateParams.subTopic;
+
+          return juuiAPI.getSubTopicDetails(topic, subTopic)
+            .then((result)=> {
+              const subTopicDetails = {topic, subTopic};
+              if (subTopicDetails) {
+                return subTopicDetails;
+              } else {
+                console.error('error');
+                $state.go('home');
+                return $q.reject({});
+              }
+            })
+            .catch((error)=> {
+              console.error(error);
+              $state.go('home');
+              return $q.reject({});
+            });
+
+        }
+      }
+    }
+  ];
+
+export const juuiTopicsGeometryStates =
+[
+  {
+    name: 'geometry',
+    url: '/geometry',
+    component: 'juuiTopicGeometry',
+    resolve: {
+      subTopicDetails: /** @ngInject */
+        ($stateParams,
+         $state,
+         $q,
+         juuiAPI)=> {
+
+        const topic = 'geometry';
+        const subTopic = $stateParams.subTopic;
+
+        return juuiAPI.getSubTopicDetails(topic, subTopic)
+          .then((result)=> {
+            const subTopicDetails = {topic, subTopic};
+            if (subTopicDetails) {
+              return subTopicDetails;
+            } else {
+              console.error('error');
+              $state.go('home');
+              return $q.reject({});
+            }
+          })
+          .catch((error)=> {
+            console.error(error);
             $state.go('home');
             return $q.reject({});
-          }
-        })
-        .catch((error)=> {
-          console.error(error);
-          $state.go('home');
-          return $q.reject(error);
-        });
+          });
 
+      }
     }
   }
-};
-
-export const juuiTopicsFunctionsState =
-{
-  name: 'functions',
-  url: '/functions/{subTopic}',
-  component: 'juuiTopicFunctions',
-  resolve: {
-    subTopicDetails: /** @ngInject */
-      ($stateParams,
-       $state,
-        $q,
-       juuiAPI)=> {
-
-      const topic = 'functions';
-      const subTopic = $stateParams.subTopic;
-
-      return juuiAPI.getSubTopicDetails(topic, subTopic)
-        .then((result)=> {
-          const subTopicDetails = {topic, subTopic};
-          if (subTopicDetails) {
-            return subTopicDetails;
-          } else {
-            console.error('error');
-            $state.go('home');
-            return $q.reject({});
-          }
-        })
-        .catch((error)=> {
-          console.error(error);
-          $state.go('home');
-          return $q.reject({});
-        });
-
-    }
-  }
-};
-
-export const juuiTopicsGeometryState =
-{
-  name: 'geometry',
-  url: '/geometry/{subTopic}',
-  component: 'juuiTopicGeometry',
-  resolve: {
-    subTopicDetails: /** @ngInject */
-      ($stateParams,
-       $state,
-       $q,
-       juuiAPI)=> {
-
-      const topic = 'geometry';
-      const subTopic = $stateParams.subTopic;
-
-      return juuiAPI.getSubTopicDetails(topic, subTopic)
-        .then((result)=> {
-          const subTopicDetails = {topic, subTopic};
-          if (subTopicDetails) {
-            return subTopicDetails;
-          } else {
-            console.error('error');
-            $state.go('home');
-            return $q.reject({});
-          }
-        })
-        .catch((error)=> {
-          console.error(error);
-          $state.go('home');
-          return $q.reject({});
-        });
-
-    }
-  }
-};
+];
