@@ -1,0 +1,22 @@
+div(layout-gt-sm='row', flex="")
+  md-divider()
+  div(flex-gt-sm='50')
+    div(layout='column', layout-padding="", layout-margin="")
+      div(layout='column')
+        div(layout='row', layout-align='start center')
+          h5.md-title Diagonal de un polígono
+        div(layout='row', layout-align='start center')
+          span.md-body-1 El segmento que une dos vértices no consecutivos del polígono se denomina &nbsp;
+            b
+              span diagonal
+            | .
+
+
+  //md-divider()
+  div(flex='')
+    div(flex="100")
+      .svg-container-animation
+        svg.svg-responsive#svg-diagonal(width="100%", height="100%", viewBox="0 0 300 250")
+      div(layout='row', layout-align='center center')
+        md-button.md-raised.md-primary(ng-click='regularPolygonsController.automaticPolygons()')
+          | Animar

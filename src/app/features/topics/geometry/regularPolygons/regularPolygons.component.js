@@ -58,7 +58,7 @@ class RegularPolygonsController {
     this.MIN_SIDES = 3;
     this._animationQueue = [];
 
-    let snap = Snap('#svg');
+    let snap = Snap('#svg-regularPolygons');
 
     /*    var w = angular.element($document[0].getElementById('svg'));
      w.bind('resize', function () {
@@ -109,10 +109,10 @@ class RegularPolygonsController {
 
   onChangeSides(sides) {
     this._untouch = false;
-    this.animatePolygon(sides);
+    this.animateRegularPolygon(sides);
   }
 
-  automaticPolygons() {
+  automaticRegularPolygon() {
 
     this._untouch = true;
     this._cancelTimers();
@@ -126,7 +126,7 @@ class RegularPolygonsController {
         if (this._untouch) {
           console.log('animate', time);
           this.sides += 1;
-          this.animatePolygon(this.sides);
+          this.animateRegularPolygon(this.sides);
         }
       }, time);
 
@@ -135,7 +135,7 @@ class RegularPolygonsController {
 
   }
 
-  animatePolygon(sides) {
+  animateRegularPolygon(sides) {
 
     const options = paths[sides];
 
