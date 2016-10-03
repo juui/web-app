@@ -1,8 +1,7 @@
 class GeometryController {
 
   /** @ngInject */
-  constructor($document, $timeout) {
-
+  constructor() {
   }
 
   $onInit() {
@@ -17,7 +16,7 @@ class GeometryController {
 }
 
 export const topicGeometry = {
-  template: `<ui-view></ui-view>`,
+  template: require('./geometry.template.html'),
   controller: GeometryController,
   controllerAs: 'geometryController',
   selector: 'juuiTopicGeometry'
