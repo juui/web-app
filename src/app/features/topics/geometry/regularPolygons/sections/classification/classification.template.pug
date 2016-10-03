@@ -9,11 +9,11 @@ div(layout-gt-sm='row', flex="")
           span.md-body-1 Los polígonos regulares según la cantidad de sus lados se denominan:
         br()
         md-slider(flex='', md-discrete='',
-        ng-model='regularPolygonsController.sides', step='1',
-        min='{{::regularPolygonsController.MIN_SIDES}}',
-        max='{{::regularPolygonsController.MAX_SIDES}}',
+        ng-model='regularPolygonsController.sections.classification.sides', step='1',
+        min='{{::regularPolygonsController.sections.classification.MIN_SIDES}}',
+        max='{{::regularPolygonsController.sections.classification.MAX_SIDES}}',
         aria-label='sides',
-        ng-change="regularPolygonsController.onChangeSides(regularPolygonsController.sides)")
+        ng-change="::regularPolygonsController.sections.classification.onChangeSides(regularPolygonsController.sections.classification.sides)")
 
   //md-divider()
   div(flex='')
@@ -21,7 +21,7 @@ div(layout-gt-sm='row', flex="")
       .svg-container-animation
         svg.svg-responsive#svg-regularPolygons(width="100%", height="100%", viewBox="0 0 300 250")
       div(layout='row', layout-align='center center')
-        h4 {{regularPolygonsController.name}}: {{regularPolygonsController.sides}} lados
+        h4 {{regularPolygonsController.sections.classification.name}}: {{regularPolygonsController.sections.classification.sides}} lados
       div(layout='row', layout-align='center center')
-        md-button.md-raised.md-primary(ng-click='regularPolygonsController.automaticRegularPolygon()')
+        md-button.md-raised.md-primary(ng-click='regularPolygonsController.sections.classification.automaticClassification()')
           | Animar
