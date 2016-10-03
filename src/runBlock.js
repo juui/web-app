@@ -9,7 +9,7 @@ function runBlock($uiRouter, $transitions, $analytics, $trace, juuiSocket) {
     $analytics.pageTrack($transition$.router.urlRouter.location);
   });
 
-  vis.visualizer($uiRouter);
+  //vis.visualizer($uiRouter);
 
   $trace.enable(1);
 

@@ -1,1 +1,23 @@
-<div layout-gt-sm="row" layout="column" flex=""><md-divider></md-divider><div flex-gt-sm="50"><div layout="column" layout-padding="" layout-margin=""><div layout="column"><div layout="row" layout-align="center center"><span class="md-body-1">Los polígonos regulares según sus lados se denominan:</span></div><br/><md-slider flex="" md-discrete="" ng-model="geometryController.sides" step="1" min="{{::geometryController.MIN_SIDES}}" max="{{::geometryController.MAX_SIDES}}" aria-label="sides" ng-change="geometryController.onChangeSides(geometryController.sides)"></md-slider></div></div></div><!--md-divider()--><div flex=""><div flex="100"><div class="svg-container-animation"><svg class="svg-responsive" id="svg" width="100%" height="100%" viewBox="0 0 300 250"></svg></div><div layout="row" layout-align="center center"><h4>{{geometryController.name}}: {{geometryController.sides}} lados</h4></div></div></div></div>
+
+<div layout-gt-sm="row" layout="column" flex="">
+  <md-divider></md-divider>
+  <div flex-gt-sm="50">
+    <div layout="column" layout-padding="" layout-margin="">
+      <div layout="column">
+        <div layout="row" layout-align="center center"><span class="md-body-1">Los polígonos regulares según la cantidad de sus lados se denominan:</span></div><br/>
+        <md-slider flex="" md-discrete="" ng-model="regularPolygonsController.sides" step="1" min="{{::regularPolygonsController.MIN_SIDES}}" max="{{::regularPolygonsController.MAX_SIDES}}" aria-label="sides" ng-change="regularPolygonsController.onChangeSides(regularPolygonsController.sides)"></md-slider>
+      </div>
+    </div>
+  </div>
+  <!--md-divider()-->
+  <div flex="">
+    <div flex="100">
+      <div class="svg-container-animation">
+        <svg class="svg-responsive" id="svg" width="100%" height="100%" viewBox="0 0 300 250"></svg>
+      </div>
+      <div layout="row" layout-align="center center">
+        <h4>{{regularPolygonsController.name}}: {{regularPolygonsController.sides}} lados</h4>
+      </div>
+    </div>
+  </div>
+</div>

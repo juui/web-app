@@ -17,6 +17,10 @@ class TopicController {
     console.log(this);
   }
 
+  getState(topic, subTopic) {
+    return `${topic}.${subTopic}`;
+  }
+
   $onDestroy() {
   }
 

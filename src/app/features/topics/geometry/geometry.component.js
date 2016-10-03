@@ -17,10 +17,7 @@ class GeometryController {
 }
 
 export const topicGeometry = {
-  bindings: {
-    _subTopicDetails: '<subTopicDetails'
-  },
-  template: require('./geometry.template.html'),
+  template: `<ui-view></ui-view>`,
   controller: GeometryController,
   controllerAs: 'geometryController',
   selector: 'juuiTopicGeometry'

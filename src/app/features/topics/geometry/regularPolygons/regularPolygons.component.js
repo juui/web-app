@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 const paths = {
   '3': {
     d: 'M 75.00000000000003 206.60254037844388 L 74.99999999999996 33.397459621556166 L 225 119.99999999999997z',
@@ -43,7 +41,7 @@ const paths = {
   }
 };
 
-class GeometryController {
+class RegularPolygonsController {
 
   /** @ngInject */
   constructor($document, $timeout) {
@@ -82,7 +80,7 @@ class GeometryController {
   }
 
   $onInit() {
-    console.log('Init', 'GeometryController');
+    console.log('Init', 'RegularPolygonsController');
     console.log(this);
 
     for (let i = this.MIN_SIDES; i < this.MAX_SIDES; ++i) {
@@ -126,12 +124,12 @@ class GeometryController {
 
 }
 
-export const topicGeometry = {
+export const geometryRegularPolygons = {
   bindings: {
     _subTopicDetails: '<subTopicDetails'
   },
-  template: require('./geometry.template.html'),
-  controller: GeometryController,
-  controllerAs: 'geometryController',
-  selector: 'juuiTopicGeometry'
+  template: require('./regularPolygons.template.html'),
+  controller: RegularPolygonsController,
+  controllerAs: 'regularPolygonsController',
+  selector: 'juuiTopicGeometryRegularPolygons'
 };
