@@ -6,21 +6,23 @@ const root = 'https://www.juui.org';
 class juuiSocket {
 
   /** @ngInject */
-  constructor() {
+  constructor($log) {
+
+    this._$log = $log;
 
     this._socket = io.connect(root + '/main');
 
     this._socket.on('connect', ()=> {
-      console.log('main', 'connect');
+      this._$log.debug('main', 'connect');
     });
 
     this._socket.on('identification', (result)=> {
       this._id = result.id;
-      console.log('main', 'identification', 'id:', this._id);
+      this._$log.debug('main', 'identification', 'id:', this._id);
     });
 
     this._socket.on('disconnect', ()=> {
-      console.log('main', 'disconnect');
+      this._$log.debug('main', 'disconnect');
     });
 
   }

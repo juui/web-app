@@ -1,7 +1,9 @@
 class ToolbarController {
 
   /** @ngInject */
-  constructor($mdSidenav, $mdDialog) {
+  constructor($mdSidenav, $mdDialog, $log) {
+
+    this._$log = $log;
 
     this._$mdSidenav = $mdSidenav;
     this._$mdDialog = $mdDialog;
@@ -10,14 +12,9 @@ class ToolbarController {
   }
 
   $onInit() {
-    console.log('Init', 'toolbarController');
-    console.log(this);
-
   }
 
   toggleSidenav(menuId) {
-
-    console.log('toggle');
 
     this._$mdSidenav(menuId)
       .toggle()
@@ -28,17 +25,13 @@ class ToolbarController {
 
   showLoginForm(event) {
 
-    console.log('showLoginForm');
     this._$mdDialog.show({
       controller: /** @ngInject */
         ($mdDialog, $scope)=> {
 
-          console.log('init', 'loginController');
-
         $scope.close = close;
 
         function close(){
-          console.log('close');
           $mdDialog.hide();
         }
 
@@ -51,9 +44,9 @@ class ToolbarController {
       bindToController: true
     })
       .then(function (answer) {
-        console.log('You said the information was "' + answer + '".');
+        this._$log.debug('You said the information was "' + answer + '".');
       }, function () {
-        console.log('You cancelled the dialog.');
+        this._$log.debug('You cancelled the dialog.');
       });
 
   }

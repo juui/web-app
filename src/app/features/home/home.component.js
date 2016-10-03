@@ -1,14 +1,13 @@
 class HomeController {
 
   /** @ngInject */
-  constructor($mdColors, $mdColorPalette) {
+  constructor($mdColors, $mdColorPalette, $log) {
 
     this._$mdColors = $mdColors;
     this._$mdColorPalette = $mdColorPalette;
+    this._$log = $log;
 
     //TODO: remove
-    // console.log($mdColors);
-    // console.log();
     // this.colors = {
     //   favorite: $mdColors.getThemeColor('warn')
     // };
@@ -19,8 +18,6 @@ class HomeController {
   }
 
   $onInit() {
-    console.log('Init Home');
-    this.loadFacebookElements();
   }
 
   $onDestroy() {
@@ -30,7 +27,7 @@ class HomeController {
   loadFacebookElements() {
 
     if (window.FB) {
-      console.log('loadFacebookElements');
+      this._$log.debug('loadFacebookElements');
       window.FB.XFBML.parse();
       clearInterval(this.timer);
     }

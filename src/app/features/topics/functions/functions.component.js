@@ -8,8 +8,6 @@ class FunctionsController {
   }
 
   $onInit() {
-    console.log('Init', 'FunctionsController');
-    console.log(this);
   }
 
   $onDestroy() {

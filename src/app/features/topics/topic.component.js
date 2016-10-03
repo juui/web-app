@@ -13,8 +13,6 @@ class TopicController {
   }
 
   $onInit() {
-    console.log('Init', 'topicController');
-    console.log(this);
   }
 
   getState(topic, subTopic) {

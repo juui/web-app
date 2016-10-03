@@ -7,8 +7,6 @@ class SidenavController {
 
   toggleSidenav(menuId) {
 
-    console.log('toggle');
-
     this._$mdSidenav(menuId)
       .toggle()
       .then(() => {

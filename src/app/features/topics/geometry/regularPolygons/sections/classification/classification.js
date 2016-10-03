@@ -43,7 +43,6 @@ const paths = {
 
 class Classification {
 
-  /** @ngInject */
   constructor($timeout) {
 
     this._$timeout = $timeout;
@@ -66,16 +65,15 @@ class Classification {
 
     this.name = options.name;
 
-    console.log('', this);
-
   }
 
   cancelTimers() {
-    console.log('cancelTimers', 'Classification');
+
     this._animationQueue.forEach((timer)=> {
       this._$timeout.cancel(timer);
     });
     this._animationQueue = [];
+
   }
 
   onChangeSides(sides) {
@@ -95,7 +93,6 @@ class Classification {
 
       const timer = this._$timeout(()=> {
         if (this._untouch) {
-          console.log('animate', time);
           this.sides += 1;
           this.animateClassification(this.sides);
         }
@@ -115,7 +112,6 @@ class Classification {
         d: options.d,
         fill: options.fill
       }, 1000, ()=> {
-        console.log('finish');
       });
     }
 

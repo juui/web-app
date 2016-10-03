@@ -5,9 +5,6 @@ class GeometryController {
   }
 
   $onInit() {
-    console.log('Init', 'GeometryController');
-    console.log(this);
-
   }
 
   $onDestroy() {

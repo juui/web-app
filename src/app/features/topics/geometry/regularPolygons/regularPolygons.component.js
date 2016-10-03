@@ -18,11 +18,9 @@ class RegularPolygonsController {
   }
 
   $onInit() {
-    console.log('$onInit', 'RegularPolygonsController');
   }
 
   $onDestroy() {
-    console.log('$onDestroy', 'RegularPolygonsController');
     this.sections.classification.cancelTimers();
   }
 
