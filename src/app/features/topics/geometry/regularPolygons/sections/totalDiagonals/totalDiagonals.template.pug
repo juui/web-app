@@ -1,0 +1,24 @@
+div(layout-gt-sm='row', flex="")
+  md-divider()
+  div(flex-gt-sm='50')
+    div(layout='column', layout-padding="", layout-margin="")
+      div#totalDiagonals-1(layout='column')
+        div(layout='row', layout-align='start center')
+          h5.md-title Número de diagonales
+        div(layout='row', layout-align='start center')
+          p.md-body-1
+            b
+              | I) &nbsp;
+            | A partir de un vértice de un polígono de \(n\) lados se pueden trazar \(n-3\) diagonales.
+
+        div(layout='row', layout-align='start center')
+          p.md-body-1
+            b
+              | II) &nbsp;
+            | La fórmula para calcular el total de diagonales de un polígono de \(n\) lados es: $$ \frac { n(n-3) }{ 2 } $$
+
+  div(flex='')
+    div(flex="100")
+      //div(layout='row', layout-align='center center')
+        md-button.md-raised.md-primary(ng-click='regularPolygonsController.sections.totalDiagonals.render()')
+          | Animar

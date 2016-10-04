@@ -25,18 +25,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="677.06645"
-     inkscape:cy="401.78298"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="560.25868"
+     inkscape:cy="0.60637527"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1855"
-     inkscape:window-height="1056"
-     inkscape:window-x="1985"
+     inkscape:window-width="928"
+     inkscape:window-height="1028"
+     inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata3412">
     <rdf:RDF>
@@ -76,5 +76,66 @@
        d="m 398.0001,639.20975 c 481.84277,0 482.34784,0 482.34784,0"
        id="path4294"
        inkscape:connector-curvature="0" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3338"
+       y="441.53738"
+       x="630.29437"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.80543518px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       transform="scale(0.97899622,1.0214544)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.80543518px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         y="441.53738"
+         x="630.29437"
+         id="tspan3340"
+         sodipodi:role="line">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.80543518px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="898.44183"
+       y="623.37701"
+       id="text3392"
+       sodipodi:linespacing="125%"
+       transform="scale(0.97899622,1.0214544)"><tspan
+         sodipodi:role="line"
+         id="tspan3394"
+         x="898.44183"
+         y="623.37701">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.80543518px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="798.953"
+       y="960.79987"
+       id="text4256"
+       sodipodi:linespacing="125%"
+       transform="scale(0.97899622,1.0214544)"><tspan
+         sodipodi:role="line"
+         id="tspan4258"
+         x="798.953"
+         y="960.79987">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.80543518px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="461.64053"
+       y="956.27618"
+       id="text4256-7"
+       sodipodi:linespacing="125%"
+       transform="scale(0.97899622,1.0214544)"><tspan
+         sodipodi:role="line"
+         id="tspan4258-5"
+         x="461.64053"
+         y="956.27618">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.80543518px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="362.80432"
+       y="621.90411"
+       id="text4256-3"
+       sodipodi:linespacing="125%"
+       transform="scale(0.97899622,1.0214544)"><tspan
+         sodipodi:role="line"
+         id="tspan4258-56"
+         x="362.80432"
+         y="621.90411">E</tspan></text>
   </g>
 </svg>

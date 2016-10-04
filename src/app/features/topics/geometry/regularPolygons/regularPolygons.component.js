@@ -1,5 +1,6 @@
 import Classification from './sections/classification/classification';
-import Diagonal from './sections/diagonal/diagonal'
+import Diagonal from './sections/diagonal/diagonal';
+import TotalDiagonals from './sections/totalDiagonals/totalDiagonals';
 
 class RegularPolygonsController {
 
@@ -7,7 +8,7 @@ class RegularPolygonsController {
   constructor($timeout, juuiConstants) {
 
     let mainContent = document.getElementById('main-content');
-    if (mainContent){
+    if (mainContent) {
       mainContent.scrollTop = 0;
     }
 
@@ -19,12 +20,14 @@ class RegularPolygonsController {
 
     this.sections = {
       classification: new Classification($timeout),
-      diagonal: new Diagonal(juuiConstants.colors)
+      diagonal: new Diagonal(juuiConstants.colors),
+      totalDiagonals: new TotalDiagonals()
     };
 
   }
 
   $onInit() {
+
   }
 
   $onDestroy() {
