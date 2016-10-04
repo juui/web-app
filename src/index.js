@@ -19,14 +19,15 @@ import routesConfig from './routes';
 import runBlock from './runBlock';
 import settings from './settings'
 
-import juuiAPI from './app/core/api'
-import juuiSocket from './app/core/socket'
+import juuiAPI from './app/core/api';
+import juuiConstants from './app/core/constants';
+import juuiSocket from './app/core/socket';
 
 export const app = 'app';
 
 import './index.styl';
-import './app/features/home/home.styles.styl'
-import './app/features/login/login.styles.styl'
+import './app/features/home/home.styles.styl';
+import './app/features/login/login.styles.styl';
 
 import {dashboard} from './app/features/dashboard/dashboard.component';
 import {toolbar} from './app/features/dashboard/toolbar.component';
@@ -58,6 +59,7 @@ angular
   .config(settings)
   .run(runBlock)
   .service('juuiAPI', juuiAPI)
+  .service('juuiConstants', juuiConstants)
   .service('juuiSocket', juuiSocket)
   .component('juuiDashboard', dashboard)
   .component('juuiToolbar', toolbar)

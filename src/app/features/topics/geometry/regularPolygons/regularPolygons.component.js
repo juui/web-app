@@ -4,7 +4,12 @@ import Diagonal from './sections/diagonal/diagonal'
 class RegularPolygonsController {
 
   /** @ngInject */
-  constructor($timeout) {
+  constructor($timeout, juuiConstants) {
+
+    let mainContent = document.getElementById('main-content');
+    if (mainContent){
+      mainContent.scrollTop = 0;
+    }
 
     this._$timeout = $timeout;
 
@@ -14,7 +19,7 @@ class RegularPolygonsController {
 
     this.sections = {
       classification: new Classification($timeout),
-      diagonal: new Diagonal()
+      diagonal: new Diagonal(juuiConstants.colors)
     };
 
   }

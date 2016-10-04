@@ -108,6 +108,7 @@ class Classification {
     const options = paths[sides];
 
     if (options) {
+      this.name = options.name;
       this._polygon.animate({
         d: options.d,
         fill: options.fill

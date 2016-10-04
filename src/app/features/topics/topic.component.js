@@ -8,7 +8,10 @@ class TopicController {
     this.juuiId = topic.juuiId;
     this.subTopics = topic.subTopics;
 
-    document.getElementById('main-content').scrollTop = 0;
+    let mainContent = document.getElementById('main-content');
+    if (mainContent){
+      mainContent.scrollTop = 0;
+    }
 
   }
 
