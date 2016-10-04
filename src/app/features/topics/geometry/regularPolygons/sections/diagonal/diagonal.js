@@ -1,5 +1,7 @@
 class Diagonal {
 
+  //base:http://codepen.io/anon/pen/ozorWA
+
   constructor() {
 
     this._timer = undefined;
