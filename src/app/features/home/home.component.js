@@ -1,11 +1,10 @@
 class HomeController {
 
   /** @ngInject */
-  constructor($mdColors, $mdColorPalette, $log) {
+  constructor($mdColors, $mdColorPalette) {
 
     this._$mdColors = $mdColors;
     this._$mdColorPalette = $mdColorPalette;
-    this._$log = $log;
 
     //TODO: remove
     // this.colors = {
@@ -27,7 +26,7 @@ class HomeController {
   loadFacebookElements() {
 
     if (window.FB) {
-      this._$log.debug('loadFacebookElements');
+      console.log('loadFacebookElements');
       window.FB.XFBML.parse();
       clearInterval(this.timer);
     }

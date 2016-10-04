@@ -1,9 +1,7 @@
 class ToolbarController {
 
   /** @ngInject */
-  constructor($mdSidenav, $mdDialog, $log) {
-
-    this._$log = $log;
+  constructor($mdSidenav, $mdDialog) {
 
     this._$mdSidenav = $mdSidenav;
     this._$mdDialog = $mdDialog;
@@ -44,9 +42,9 @@ class ToolbarController {
       bindToController: true
     })
       .then(function (answer) {
-        this._$log.debug('You said the information was "' + answer + '".');
+        console.log('You said the information was "' + answer + '".');
       }, function () {
-        this._$log.debug('You cancelled the dialog.');
+        console.log('You cancelled the dialog.');
       });
 
   }

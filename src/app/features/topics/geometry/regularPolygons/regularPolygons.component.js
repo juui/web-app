@@ -1,4 +1,5 @@
-import Classification from './sections/classification/classification'
+import Classification from './sections/classification/classification';
+import Diagonal from './sections/diagonal/diagonal'
 
 class RegularPolygonsController {
 
@@ -12,7 +13,8 @@ class RegularPolygonsController {
     this.subTopic = subTopicDetails.subTopic;
 
     this.sections = {
-      classification: new Classification($timeout)
+      classification: new Classification($timeout),
+      diagonal: new Diagonal()
     };
 
   }

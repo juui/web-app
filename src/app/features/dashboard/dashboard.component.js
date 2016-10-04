@@ -1,8 +1,7 @@
 class DashboardController {
 
   /** @ngInject */
-  constructor($log, juuiAPI) {
-    this._$log = $log;
+  constructor(juuiAPI) {
     this._juuiAPI = juuiAPI;
     this.auth = {
       isLoggedIn: false
@@ -16,7 +15,7 @@ class DashboardController {
         this.auth = result.data;
       })
       .catch((error)=>{
-        this._$log.error(error);
+        console.error(error);
       })
 
   }
