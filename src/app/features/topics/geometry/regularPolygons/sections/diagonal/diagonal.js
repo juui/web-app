@@ -13,7 +13,7 @@ class Diagonal {
       (svg)=> {
         this._canvas.append(svg);
 
-        this._diagonalA = this._canvas.path('m 399.28461,639.50456 c 483.28622,0 481.85,-0.71341 481.85,-0.71341');
+        this._diagonalA = this._canvas.path('m 398.0001,639.20975 c 481.84277,0 482.34784,0 482.34784,0');
         this._diagonalA.attr({
           id: "squiggle",
           fill: "none",
