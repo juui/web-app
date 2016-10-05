@@ -1,0 +1,44 @@
+div(layout-gt-sm='row', flex="")
+  md-divider()
+  div(flex-gt-sm='50')
+    div(layout='column', layout-padding="", layout-margin="")
+      div(layout='column')
+        div(layout='row', layout-align='start center')
+          h5.md-title Ángulos internos
+            div(layout='row', layout-align='start center')
+              p.md-body-1
+                | Son los ángulos formados por \(2\) lados consecutivos y su interior.
+
+        div(layout='row', layout-align='start center')
+          h5.md-title Ángulos externos
+            div(layout='row', layout-align='start center')
+              p.md-body-1
+                | Son los ángulos adyacentes a los ángulos internos que se obtienen al prolongar los lados en un mismo sentido. Dada la siguiente figura:
+
+        div(layout='row', layout-align='start center')
+          p.md-body-1
+            b
+              | I)&nbsp;
+            | Ángulos externos: \( \alpha \),  \( \theta \), \( \omega \) y \( \lambda \).
+
+        div(layout='row', layout-align='start center')
+          p.md-body-1
+            b
+              | II)&nbsp;
+            | Ángulos externos: \( { e }_{ 1 } \),  \( { e }_{ 2 } \), \( { e }_{ 3 } \), \( { e }_{ 4 } \) y \( { e }_{ 5 } \).
+
+        div(layout='row', layout-align='start center')
+          p.md-body-1
+            b
+              | III)&nbsp;
+            | Las parejas de ángulos consecutivos (interno y externo) son complementarios, es decir: \( { e }_{ 1 } +  \alpha = 180° \), ... , \( { e }_{ 5 } + \lambda = 180° \).
+
+
+
+  div(flex='')
+    div(flex="100")
+      .svg-container-animation
+        svg.svg-responsive#svg-diagonal(width="100%", height="100%")
+      div(layout='row', layout-align='center center')
+        md-button.md-raised.md-primary(ng-click='regularPolygonsController.sections.diagonal.automaticDiagonal()')
+          | Animar
