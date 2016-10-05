@@ -10,9 +10,10 @@ class Diagonal {
     this._animationDiagonal = undefined;
 
     this._canvas = Snap('#svg-diagonal');
-    this._canvas.attr({viewBox: '0 0 1280 720.00001'});
     Snap.load(require('./assets/diagonal-concept-2.svg'),
       (svg)=> {
+
+        this._canvas.attr({viewBox: '0 0 1280 720.00001'});
         this._canvas.append(svg);
 
         this._diagonalA = this._canvas.path('m 398.0001,639.20975 c 481.84277,0 482.34784,0 482.34784,0');
