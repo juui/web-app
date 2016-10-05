@@ -7,6 +7,9 @@ class RegularPolygonsController {
   /** @ngInject */
   constructor($timeout, juuiConstants) {
 
+    this._timerRender = undefined;
+    this._tryRender();
+
     let mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.scrollTop = 0;
@@ -32,6 +35,29 @@ class RegularPolygonsController {
 
   $onDestroy() {
     this.sections.classification.cancelTimers();
+  }
+
+  _tryRender() {
+
+    if (!this._render()) {
+      this._timerRender = setInterval(
+        ()=> {
+          this._render();
+        }, 500);
+    }
+
+  }
+
+  _render() {
+
+    if (MathJax) {
+      MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+      console.log('render');
+      clearInterval(this._timerRender);
+    }
+
+    return MathJax;
+
   }
 
 
