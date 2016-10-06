@@ -69,8 +69,6 @@ class Angles {
 
         });
 
-        this.automaticAngles();
-
       });
 
   }

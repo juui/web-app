@@ -26,8 +26,6 @@ class Diagonal {
           transform: 'translate(0,-332.36214)'
         });
 
-        this.automaticDiagonal();
-
       });
 
   }
