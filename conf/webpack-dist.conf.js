@@ -109,6 +109,9 @@ module.exports = {
               },
               {
                 removeEmptyAttrs: false
+              },
+              {
+                cleanupIDs: false
               }
             ]
           }

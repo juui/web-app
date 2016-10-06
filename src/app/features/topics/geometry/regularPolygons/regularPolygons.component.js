@@ -26,7 +26,7 @@ class RegularPolygonsController {
       classification: new Classification($timeout),
       diagonal: new Diagonal(juuiConstants.colors),
       totalDiagonals: new TotalDiagonals(),
-      angles: new Angles()
+      angles: new Angles(juuiConstants.colors)
     };
 
   }
