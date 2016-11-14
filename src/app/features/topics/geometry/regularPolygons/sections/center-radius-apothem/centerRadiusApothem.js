@@ -1,4 +1,5 @@
 import Velocity from 'velocity-animate';
+//Velocity(document.body, { opacity: 0.5 });
 
 class Concepts {
 
