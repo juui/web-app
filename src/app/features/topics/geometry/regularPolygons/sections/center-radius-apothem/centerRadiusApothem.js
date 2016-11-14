@@ -1,3 +1,5 @@
+import Velocity from 'velocity-animate';
+
 class Concepts {
 
   constructor() {
