@@ -40,9 +40,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.16572815"
-     inkscape:cx="2557.617"
-     inkscape:cy="-486.45599"
+     inkscape:zoom="0.9375"
+     inkscape:cx="580.84389"
+     inkscape:cy="256.68089"
      inkscape:document-units="px"
      inkscape:current-layer="g4184"
      showgrid="false"
@@ -85,7 +85,7 @@
            r="232.91443"
            cy="1378.0764"
            cx="1502.8572"
-           id="internalCircle"
+           id="InternalCircle"
            style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2.99999997, 2.99999997;stroke-dashoffset:0;stroke-opacity:1" />
         <circle
            r="270.06656"

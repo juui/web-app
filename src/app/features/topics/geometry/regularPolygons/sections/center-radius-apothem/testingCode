@@ -1,0 +1,33 @@
+    // for (let keyConcept in concepts) {
+    //   let index = 0;
+    //   for (let component of concepts[keyConcept].components) {
+    //     this._concepts[component].animate({'opacity': 1}, 5000 * index + 5000, mina.easeinout, ()=>{
+    //       console.log('finish', 5000 * index + 5000);
+    //     });
+    //   }
+    //   ++index;
+    //
+    // }
+
+    //this._concepts['internalCircle'].animate({'opacity': 1}, 2500, mina.easeinout);
+
+        for (let keyConcept in this._concepts) {
+
+          for (let animation of this._animations[keyConcept]) {
+            if (animation) {
+              animation.stop();
+            }
+          }
+
+        }
+
+        this._animations = {};
+
+
+          _animateCenter() {
+            for (let component of concepts['center'].components) {
+              this._concepts[component].animate({'opacity': 1}, 5000, mina.easeinout, ()=>{
+                console.log('finish', 'center');
+              });
+            }
+          }

@@ -1,0 +1,33 @@
+div(layout-gt-sm='row', flex="")
+  md-divider()
+  div(flex-gt-sm='50')
+    div(layout='column', layout-padding="", layout-margin="")
+      div(layout='column')
+        div(layout='row', layout-align='start center')
+          h5.md-title Centro de un polígono regular
+            div(layout='row', layout-align='start center')
+              p.md-body-1
+                | El centro de un polígono regular es el centro común de sus circunferencias inscrita y circunscrita. En la figura se representa con la letra \(O\).
+
+        div(layout='row', layout-align='start center')
+          h5.md-title Radio de un polígono regular
+            div(layout='row', layout-align='start center')
+              p.md-body-1
+                | El segmento \(r\) que une el centro \(O\) con un vértice del polígono se denomina radio.
+
+        div(layout='row', layout-align='start center')
+          h5.md-title Apotema de un polígono regular
+            div(layout='row', layout-align='start center')
+              p.md-body-1
+                | El segmento de longitud \(a\) que une el centro \(O\) con el punto medio de uno de los lados del polígono.
+
+  div(flex='', layout-align='center center')
+    div(flex="100")
+      .svg-container-animation
+        svg.svg-responsive#svg-concepts-1(width="100%", height="100%")
+      //div(layout='row', layout-align='center center')
+      //  h4 {{'CENTRO'}}
+      br
+      div(layout='row', layout-align='center center')
+        md-button.md-raised.md-primary(ng-click='regularPolygonsController.sections.concepts.automaticConcepts()')
+          | Animar: {{regularPolygonsController.sections.concepts.currentAnimation}}

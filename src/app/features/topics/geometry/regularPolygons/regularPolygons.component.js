@@ -1,7 +1,8 @@
 import Classification from './sections/classification/classification';
 import Diagonal from './sections/diagonal/diagonal';
 import TotalDiagonals from './sections/totalDiagonals/totalDiagonals';
-import Angles from './sections/interiorExteriorAngles/interiorExteriorAngles'
+import Angles from './sections/interiorExteriorAngles/interiorExteriorAngles';
+import Concepts from './sections/center-radius-apothem/centerRadiusApothem';
 
 class RegularPolygonsController {
 
@@ -26,7 +27,8 @@ class RegularPolygonsController {
       classification: new Classification($timeout),
       diagonal: new Diagonal(juuiConstants.colors),
       totalDiagonals: new TotalDiagonals(),
-      angles: new Angles(juuiConstants.colors)
+      angles: new Angles(juuiConstants.colors),
+      concepts: new Concepts()
     };
 
   }
