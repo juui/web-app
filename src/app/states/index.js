@@ -123,3 +123,12 @@ export const juuiTopicsGeometryStates =
       }
     }
   ];
+
+export const juuiPracticeStates =
+  [
+    {
+      name: 'practice',
+      url: '/practice',
+      component: 'juuiPractice'
+    }
+  ];

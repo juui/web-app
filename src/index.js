@@ -41,6 +41,7 @@ import {topic} from './app/features/topics/topic.component';
 import {topicFunctions} from './app/features/topics/functions/functions.component';
 import {topicGeometry} from './app/features/topics/geometry/geometry.component';
 import {geometryRegularPolygons} from './app/features/topics/geometry/regularPolygons/regularPolygons.component';
+import {practice} from './app/features/practice/practice.component';
 
 angular
   .module(app,
@@ -72,6 +73,7 @@ angular
 
   .component('juuiTopicGeometry', topicGeometry)
   .component('juuiTopicGeometryRegularPolygons', geometryRegularPolygons)
+  .component('juuiPractice', practice)
 ;
 
 

@@ -5,7 +5,8 @@ import
   juuiHomeStates,
   juuiTopicsStates,
   juuiTopicsFunctionsStates,
-  juuiTopicsGeometryStates
+  juuiTopicsGeometryStates,
+  juuiPracticeStates
 }
   from './app/states/index';
 
@@ -15,6 +16,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   const states = [
+    ...juuiPracticeStates,
     ...juuiHomeStates,
     ...juuiTopicsStates,
     ...juuiTopicsFunctionsStates,
