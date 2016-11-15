@@ -8,11 +8,6 @@ class Concepts {
     this._$scope = $scope;
     this.isEnableAnimation = true;
 
-    this._allConcepts = ['internalCircle', 'externalCircle', 'center', 'centerText',
-      'radius', 'radiusText', 'apothem', 'apothemText', 'slice', 'angle90'];
-
-    this._animations = [];
-
     this._concepts = {
       'center': {
         label: 'Centro',
@@ -63,43 +58,27 @@ class Concepts {
 
     this.currentConcept = this._concepts['center']['label'];
     this.isEnableAnimation = false;
-    Velocity(this._concepts['center']['elements'], {opacity: 1}, 5000);
+    Velocity(this._concepts['center']['elements'], {opacity: 1}, 7000);
     Velocity(this._concepts['center']['elements'], {opacity: 0})
       .then(()=> {
         this.currentConcept = this._concepts['radius']['label'];
         this._$scope.$apply();
       });
 
-    Velocity(this._concepts['radius']['elements'], {opacity: 1}, 5000);
+    Velocity(this._concepts['radius']['elements'], {opacity: 1}, 7000);
     Velocity(this._concepts['radius']['elements'], {opacity: 0})
       .then(()=> {
         this.currentConcept = this._concepts['apothem']['label'];
         this._$scope.$apply();
       });
 
-    Velocity(this._concepts['apothem']['elements'], {opacity: 1}, 5000);
+    Velocity(this._concepts['apothem']['elements'], {opacity: 1}, 7000);
     Velocity(this._concepts['apothem']['elements'], {opacity: 0})
       .then(()=> {
         this.currentConcept = '';
         this.isEnableAnimation = true;
         this._$scope.$apply();
       });
-
-    // Velocity(this._concepts['center']['elements'], {opacity: 1}, 5000)
-    //   .then(()=> {
-    //
-    //     Velocity(this._concepts['center']['elements'], {opacity: 0});
-    //
-    //     Velocity(this._concepts['radius']['elements'], {opacity: 1}, 5000)
-    //       .then(()=> {
-    //
-    //         Velocity(this._concepts['radius']['elements'], {opacity: 0});
-    //         console.log('finish');
-    //
-    //       });
-    //
-    //   });
-
 
   }
 

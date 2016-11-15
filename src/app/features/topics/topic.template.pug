@@ -14,6 +14,7 @@ div(layout-gt-sm='row', layout='column')
     md-list(flex='')
       md-subheader.md-no-sticky {{::topicController.title}}
       md-list-item.md-2-line(ng-repeat='subTopic in ::topicController.subTopics',
+      ng-show='subTopic.isEnable',
       ui-sref='{{::topicController.getState(topicController.juuiId, subTopic.juuiId)}}')
         img.md-avatar(ng-src='{{::subTopic.avatar}}', alt='')
         .md-list-item-text(layout='column')
