@@ -1,6 +1,5 @@
 import  'velocity-animate/velocity';
 import 'velocity-animate/velocity.ui';
-//Velocity(document.body, { opacity: 0.5 });
 
 class Concepts {
 
