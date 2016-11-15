@@ -31,3 +31,38 @@
               });
             }
           }
+
+
+        for (let keyConcept in this._concepts) {
+          let concept = this._concepts[keyConcept];
+          let components = this._concepts[keyConcept].components;
+          for (let component of components) {
+            let element = document.getElementById(component);
+            if (element) {
+              concept.elements.push(element);
+              concept.sequences.push(
+                {
+                  e: element, p: {opacity: 1}, o: {duration: 5000, sequenceQueue: false}
+                });
+              Velocity(element, {opacity: 0});
+            }
+          }
+        }
+
+
+                      for (let keyConcept in this._concepts) {
+
+                        let sequences = this._concepts[keyConcept].sequences;
+                        let elements = this._concepts[keyConcept].elements;
+
+                        Velocity(elements, 'stop');
+                        Velocity(elements, {opacity: 0});
+
+                        //for (let element of elements) {
+                        //}
+
+                        //Velocity.RunSequence(sequences);
+
+                      }
+
+                    }

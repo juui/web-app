@@ -7,7 +7,7 @@ import Concepts from './sections/center-radius-apothem/centerRadiusApothem';
 class RegularPolygonsController {
 
   /** @ngInject */
-  constructor($timeout, juuiConstants) {
+  constructor($timeout, juuiConstants, $scope) {
 
     this._timerRender = undefined;
     this._tryRender();
@@ -28,7 +28,7 @@ class RegularPolygonsController {
       diagonal: new Diagonal(juuiConstants.colors),
       totalDiagonals: new TotalDiagonals(),
       angles: new Angles(juuiConstants.colors),
-      concepts: new Concepts()
+      concepts: new Concepts({$scope})
     };
 
   }

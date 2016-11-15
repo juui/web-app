@@ -25,9 +25,10 @@ div(layout-gt-sm='row', flex="")
     div(flex="100")
       .svg-container-animation
         svg.svg-responsive#svg-concepts-1(width="100%", height="100%")
-      //div(layout='row', layout-align='center center')
-      //  h4 {{'CENTRO'}}
+      div(layout='row', layout-align='center center')
+        h4 {{regularPolygonsController.sections.concepts.currentConcept}}
       br
       div(layout='row', layout-align='center center')
-        md-button.md-raised.md-primary(ng-click='regularPolygonsController.sections.concepts.automaticConcepts()')
-          | Animar: {{regularPolygonsController.sections.concepts.currentAnimation}}
+        md-button.md-raised.md-primary(ng-click='regularPolygonsController.sections.concepts.automaticConcepts()',
+        ng-disabled='!regularPolygonsController.sections.concepts.isEnableAnimation')
+          | Animar

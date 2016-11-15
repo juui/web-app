@@ -3,9 +3,15 @@ import 'velocity-animate/velocity.ui';
 
 class Concepts {
 
-  constructor() {
+  constructor({$scope}) {
 
-    this._allConcepts = [];
+    this._$scope = $scope;
+    this.isEnableAnimation = true;
+
+    this._allConcepts = ['internalCircle', 'externalCircle', 'center', 'centerText',
+      'radius', 'radiusText', 'apothem', 'apothemText', 'slice', 'angle90'];
+
+    this._animations = [];
 
     this._concepts = {
       'center': {
@@ -38,32 +44,65 @@ class Concepts {
           let components = this._concepts[keyConcept].components;
           for (let component of components) {
             let element = document.getElementById(component);
-            console.log(element);
-            if (element){
+            if (element) {
               concept.elements.push(element);
-              Velocity(element, {opacity: 0});
             }
           }
+          Velocity(concept.elements, {opacity: 0});
         }
-
       });
 
   }
 
-  _hideConcepts() {
-
-  }
 
   automaticConcepts() {
 
+    Velocity(this._concepts['center']['elements'], 'stop');
+    Velocity(this._concepts['radius']['elements'], 'stop');
+    Velocity(this._concepts['apothem']['elements'], 'stop');
 
-    this._hideConcepts();
+    this.currentConcept = this._concepts['center']['label'];
+    this.isEnableAnimation = false;
+    Velocity(this._concepts['center']['elements'], {opacity: 1}, 5000);
+    Velocity(this._concepts['center']['elements'], {opacity: 0})
+      .then(()=> {
+        this.currentConcept = this._concepts['radius']['label'];
+        this._$scope.$apply();
+      });
+
+    Velocity(this._concepts['radius']['elements'], {opacity: 1}, 5000);
+    Velocity(this._concepts['radius']['elements'], {opacity: 0})
+      .then(()=> {
+        this.currentConcept = this._concepts['apothem']['label'];
+        this._$scope.$apply();
+      });
+
+    Velocity(this._concepts['apothem']['elements'], {opacity: 1}, 5000);
+    Velocity(this._concepts['apothem']['elements'], {opacity: 0})
+      .then(()=> {
+        this.currentConcept = '';
+        this.isEnableAnimation = true;
+        this._$scope.$apply();
+      });
+
+    // Velocity(this._concepts['center']['elements'], {opacity: 1}, 5000)
+    //   .then(()=> {
+    //
+    //     Velocity(this._concepts['center']['elements'], {opacity: 0});
+    //
+    //     Velocity(this._concepts['radius']['elements'], {opacity: 1}, 5000)
+    //       .then(()=> {
+    //
+    //         Velocity(this._concepts['radius']['elements'], {opacity: 0});
+    //         console.log('finish');
+    //
+    //       });
+    //
+    //   });
+
 
   }
 
-  _animate() {
-
-  }
 
 }
 
